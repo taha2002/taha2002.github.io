@@ -1165,7 +1165,7 @@ video {
 
 .a3f {
     --tw-border-opacity: 1;
-    border-color: rgba(74, 108, 247, var(--tw-border-opacity));
+    border-color: #f06449;
 }
 
 .a1s\[\#d7dfff\] {
@@ -1202,7 +1202,7 @@ video {
 
 .a1h {
     --tw-bg-opacity: 1;
-    background-color: rgba(74, 108, 247, var(--tw-bg-opacity));
+    background-color: #f06449
 }
 
 .a2f {
@@ -1222,7 +1222,7 @@ video {
 
 .a3o\[\#d7dfff\] {
     --tw-bg-opacity: 1;
-    background-color: rgba(215, 223, 255, var(--tw-bg-opacity));
+    background-color: #b19386;
 }
 
 .a3o\[\#F8F9FF\] {
@@ -1751,7 +1751,7 @@ video {
 
 .input-field:focus {
     --tw-border-opacity: 1;
-    border-color: rgba(74, 108, 247, var(--tw-border-opacity));
+    border-color: #f06449;
 }
 
 .input-field:focus-visible {
@@ -1761,7 +1761,7 @@ video {
 
 .portfolio-buttons button.active {
     --tw-bg-opacity: 1;
-    background-color: rgba(74, 108, 247, var(--tw-bg-opacity));
+    background-color: #f06449;
     --tw-text-opacity: 1;
     color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
@@ -1825,12 +1825,12 @@ video {
 
 .hover\:a3f:hover {
     --tw-border-opacity: 1;
-    border-color: rgba(74, 108, 247, var(--tw-border-opacity));
+    border-color: #f06449;
 }
 
 .hover\:a1h:hover {
     --tw-bg-opacity: 1;
-    background-color: rgba(74, 108, 247, var(--tw-bg-opacity));
+    background-color: #f06449
 }
 
 .hover\:a1n:hover {

@@ -5557,3 +5557,10 @@ main {
 }
 
 
+#about .the-arrow{
+    background: #1c1d25 !important;
+}
+
+#about .go-next-label{
+    color: #1c1d25 !important;
+}

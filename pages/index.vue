@@ -17,17 +17,17 @@
                     <div class="inner-container">
                         <div class="is-left single-work-first-anim-blocks">
                             <div class="single-work-content-desc aboutme">
-                                <p>I'm Taha Bouras, a 22-year-old Italian <strong>Freelance
-                                        Back-end developer</strong>. I'm a weird guy who likes making weird things
-                                    with
-                                    web technologies. <br>I like to <strong>resolve</strong> design problems,
-                                    <strong>create</strong> smart user interface and <strong>imagine</strong> useful
-                                    interaction, developing rich web experiences &amp; <strong>web
-                                        applications</strong>.
-                                    <br>
-                                    When not working or futzing around with code, I study how to escape from University.
-                                    Actually <strong>for hire</strong>.
+                                <p>I'm Taha Bouras, a 19-year-old Algerian <strong>Freelance and Back-end
+                                        developer</strong>. I'm a weird guy who likes making weird things with web
+                                    technologies. <br>I like to <strong>resolve</strong> programming problems and
+                                    develop web applications.</p>
+                                <p>I currently <strong>work remotely as a WordPress developer</strong> I have an
+                                    <strong>experience</strong> in all aspects of <strong>WordPress</strong> website
+                                    creation and <strong>plugin building</strong>. and expertise in customizing
+                                    <strong>WooCommerce</strong> and developing solutions for wholesalers.
                                 </p>
+                                <p>When not working or futzing around with code, I study how to escape from
+                                    University🤣.</p>
                             </div>
                         </div>
                     </div>
@@ -113,6 +113,12 @@
                 </div>
 
             </div>
+            
+            <a href="#about" data-scroll="" class="hero-go-next no-smoothstate">
+                <div class="go-next-label">About Me</div>
+                <span class="the-arrow arrow-down"></span>
+            </a>
+            
         </section>
 
         <section id="education" class="a1p[120px] ac a20">
@@ -151,16 +157,10 @@
                   a3N
                   a3f
                 "></span>
-                                    <h3 class="a1P a1V aI a1L">
-                                        UI/UX Designer
-                                    </h3>
+                                    <h3 class="a1P a1V aI a1L">FreeLancer</h3>
                                     <p class="
                   a1P aH a1K a28
-                " style="
-    text-align: right;
-">
-                                        Google INC | New York
-                                    </p> <span class="
+                " style="text-align: right !important;"></p> <span class="
                   aL
                   a7
                   a1u
@@ -172,15 +172,10 @@
                   a3O
                   a1P
                   a1H
-                ">
-                                        2011 - 2013
+                ">2017 - Present
                                     </span>
-                                    <p class="a1J aH a1K">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusm tempor incididunt ut labore et dolore magna
-                                        aliqua Loremipsum dolor sit amet, consectetur adipisicing
-                                        elit.
-                                    </p>
+                                    <h3 class="a1J aH a1K">I worked in multi-domain like desktop apps developed with
+                                        electron js and I work on WordPress backend development</h3>
                                 </div>
                             </div>
                             <div class="a5 lg:a2i/2 ad"></div>
@@ -203,14 +198,10 @@
                   a3N
                   a3f
                 "></span>
-                                    <h3 class="a1P a1V aI a1L">
-                                        Specialization Course
-                                    </h3>
-                                    <p class="
+                                    <h3 class="a1P a1V aI a1L">Bachelor of Engineering</h3>
+                                    <h3 class="
                   a1P aH a1K a28
-                ">
-                                        Stanford University | New York
-                                    </p> <span class="
+                ">Ghardaia University | algeria</h3> <span class="
                   aL
                   a7
                   a1u
@@ -222,15 +213,10 @@
                   a3O
                   a1P
                   a1H
-                ">
-                                        2017 - 2018
+                ">2020 - Ongoing
                                     </span>
-                                    <p class="a1J aH a1K">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusm tempor incididunt ut labore et dolore magna
-                                        aliqua Loremipsum dolor sit amet, consectetur adipisicing
-                                        elit.
-                                    </p>
+                                    <p class="a1J aH a1K">I study maintenance industrielle
+                                        electron js and I work on WordPress backend development</p>
                                 </div>
                             </div>
                             <div class="a5 lg:a2i/2 ad">
@@ -251,14 +237,8 @@
                   a3N
                   a3f
                 "></span>
-                                    <h3 class="a1P a1V aI a1L">
-                                        Web Designer
-                                    </h3>
-                                    <p class="
-                  a1P aH a1K a28
-                ">
-                                        Facebook INC | New York
-                                    </p> <span class="
+                                    <h3 class="a1L a1P a1V aI">Wordpress Devoloper</h3>
+                                    <h3 class="a1K a1P a28 aH">Apollo Digital Solutions</h3> <span class="
                   aL
                   a7
                   a1u
@@ -270,67 +250,13 @@
                   a3O
                   a1P
                   a1H
-                ">
-                                        2014 - 2016
-                                    </span>
-                                    <p class="a1J aH a1K">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusm tempor incididunt ut labore et dolore magna
-                                        aliqua Loremipsum dolor sit amet, consectetur adipisicing
-                                        elit.
-                                    </p>
+                ">2021 - Present</span>
+                                    <h3 class="a1J aH a1K">I develop and manage 5+ websites Back-end, create and
+                                        customize plugins and APIs</h3>
                                 </div>
                             </div>
                             <div class="a5 lg:a2i/2 ad"></div>
                             <div class="a5 lg:a2i/2 ad"></div>
-                            <div class="a5 lg:a2i/2 ad">
-                                <div class="
-                lg:aB[428px]
-                xl:aB[490px]
-                a5 a3J
-                sm:a3K
-                lg:aR lg:a3P
-                ac a2g
-              "><span class="
-                  a1 ak a3
-                  lg:a3Q
-                  a2j
-                  a3M
-                  a1i
-                  az
-                  a3N
-                  a3f
-                "></span>
-                                    <h3 class="a1P a1V aI a1L">
-                                        Bachelor Degree
-                                    </h3>
-                                    <p class="
-                  a1P aH a1K a28
-                ">
-                                        Stanford University | New York
-                                    </p> <span class="
-                  aL
-                  a7
-                  a1u
-                  aK
-                  ad
-                  a1i
-                  a1h
-                  a1g
-                  a3O
-                  a1P
-                  a1H
-                ">
-                                        2019 - 2021
-                                    </span>
-                                    <p class="a1J aH a1K">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusm tempor incididunt ut labore et dolore magna
-                                        aliqua Loremipsum dolor sit amet, consectetur adipisicing
-                                        elit.
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -375,9 +301,7 @@
                                 <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
                             </linearGradient>
                         </defs>
-                    </svg>
-                </span>
-            </div>
+                    </svg></span></div>
         </section>
 
         <main>
@@ -435,11 +359,11 @@
                         <path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path>
                     </svg></div>
             </div>
-            <section id="case-studies" itemscope="" itemprop="mainContentOfPage" class="case-studies-section">
+            <section id="portfolio" itemscope="" itemprop="mainContentOfPage" class="case-studies-section">
                 <div class="section-mask"></div>
                 <div class="content">
                     <div class="section-text-mask">
-                        <h4 class="h5 section-subtitle">Case Studies</h4>
+                        <h4 class="h5 section-subtitle">Portfolio</h4>
                     </div>
                     <div class="section-text-mask">
                         <h2 class="h3 section-title">Latest Works</h2>
