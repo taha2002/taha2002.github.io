@@ -1113,6 +1113,22 @@ button[disabled] {
     z-index: 7
 }
 
+.about-go-next {
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 10px;
+    padding: 20px;
+    color: #4a4a4a;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity .35s ease .7s;
+    z-index: 7
+}
+
 .hero-go-next .the-arrow {
     top: 14px !important;
     width: 45px
@@ -4213,6 +4229,18 @@ main {
     color: #4a4a4a
 }
 
+.giga-text-main {
+    top: 96px;
+    color: #4a4a4a;
+    bottom: -30px;
+    right: 30px;
+    font-size: 162px;
+    position: absolute;
+    opacity: .07;
+    font-family: 'Roboto Mono', monospace;
+    z-index: 0;
+}
+
 .about-contact .half-contact.is-contact {
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
@@ -4372,17 +4400,25 @@ main {
     padding: 0;
     width: 100%;
     list-style: none;
-    display: block
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-me-list li {
     float: left;
     clear: none;
-    width: 22.75%;
+    width: 85px;
     margin-left: 0;
-    margin-right: 3%;
     position: relative;
-    text-align: center
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.aboutme {
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .about-me-list li:last-child {
@@ -4553,9 +4589,9 @@ main {
         width: 85%
     }
 
-    .about-me-list {
+    /* .about-me-list {
         display: none
-    }
+    } */
 }
 
 .single-work-section {
@@ -5237,6 +5273,7 @@ main {
     .single-work-ui {
         display: none
     }
+
 }
 
 @media only screen and (max-width:29.375em) {
@@ -5507,3 +5544,16 @@ main {
         page-break-after: avoid
     }
 }
+
+
+
+
+#education {
+    /* background: #1c1d25; */
+    background: #ebebeb;
+    overflow: hidden;
+    transition: all .3s ease;
+    /* color: #1c1d25; */
+}
+
+
