@@ -93,8 +93,7 @@
                   a1H
                 ">2020 - Ongoing
                                 </span>
-                                <p class="a1J aH a1K">I study maintenance industrielle
-                                    electron js and I work on WordPress backend development</p>
+                                <p class="a1J aH a1K">I study maintenance industrielle</p>
                             </div>
                         </div>
                         <div class="a5 lg:a2i/2 ad">
@@ -179,6 +178,11 @@
                             <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
                         </linearGradient>
                     </defs>
-                </svg></span></div>
+                </svg>
+            </span>
+        </div>
+        <a href="#portfolio" data-scroll="" class="hero-go-next no-smoothstate black">
+            <div class="go-next-label">Portfolio</div> <span class="the-arrow arrow-down"></span>
+        </a>
     </section>
 </template>

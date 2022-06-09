@@ -863,7 +863,14 @@
 
 <script>
 export default {
-  
+  created() {
+    console.log('created')
+    // const res = await fetch('http://localhost:3000/data/portfolio.json')
+    // this.$store.commit("modules/portfolio/SET_POSTS", res)
+  },
+  mounted() {
+    console.log('mounted')
+  },
   name: 'IndexPage',
   // layout: 'portfolio',
 

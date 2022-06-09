@@ -141,7 +141,7 @@
                         </path>
                     </svg></a></li>
         </ul><a href="#about" data-scroll class="hero-go-next no-smoothstate">
-            <div class="go-next-label">About Me</div><span class="the-arrow arrow-down"></span>
+            <div class="go-next-label">About</div><span class="the-arrow arrow-down"></span>
         </a>
     </header>
 </template>

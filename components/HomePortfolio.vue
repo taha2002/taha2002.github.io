@@ -50,10 +50,14 @@ export default {
     data: () => ({
         posts: []
     }),
+
     async fetch() {
-        this.posts = await fetch('/data/portfolio.json').then((res) =>
-            res.json()
-        )
+        const res = await fetch('/data/portfolio.json')
+        // this.$store.commit("modules/portfolio/SET_POSTS", res)
+
+        const fetchedPosts = await res.json()
+        console.log('posts', fetchedPosts)
+        this.posts = fetchedPosts
     },
     fetchOnServer: false,
     // multiple components can return the same `fetchKey` and Nuxt will track them both separately

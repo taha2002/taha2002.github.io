@@ -5271,7 +5271,11 @@ main {
 
 @media only screen and (max-width:33.75em) {
     .single-work-ui {
-        display: none
+        /* display: none */
+    }
+
+    .content {
+        width: 100%;
     }
 
 }
@@ -5557,16 +5561,21 @@ main {
 }
 
 
-#about .the-arrow{
+.black .the-arrow {
     background: #1c1d25 !important;
 }
 
-#about .go-next-label{
+.black .the-arrow:after , .black .the-arrow:before {
+    background: #1c1d25 !important;
+}
+
+.black .go-next-label {
     color: #1c1d25 !important;
 }
 
 
-.bright-theme.blog .main-navigation.view-in-scroll{
+
+.bright-theme.blog .main-navigation.view-in-scroll {
     background: #fff0
 }
 

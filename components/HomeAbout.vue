@@ -1,7 +1,7 @@
 <template>
 
     <section id="about">
-        <div class="single-work-section">
+        <div class="single-work-section" style=" margin-bottom: 30px;">
             <div class="section-mask"></div>
             <div class="content">
                 <div class="giga-text-main">About</div>
@@ -111,8 +111,8 @@
 
         </div>
 
-        <a href="#about" data-scroll="" class="hero-go-next no-smoothstate">
-            <div class="go-next-label">About Me</div>
+        <a href="#education" data-scroll="" class="hero-go-next no-smoothstate black">
+            <div class="go-next-label">Resume</div>
             <span class="the-arrow arrow-down"></span>
         </a>
 
