@@ -2,7 +2,7 @@
   <div>
     <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="main-navigation">
       <div class="content nav-content">
-        <a href="index.html" data-destination="home" itemprop="url" class="nav-logo">
+        <NuxtLink to="/" data-destination="home" itemprop="url" class="nav-logo">
           <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" version="1.0" width="256" height="256"
             viewBox="0 0 500.000000 500.000000" preserveAspectRatio="xMidYMid meet">
             <g xmlns="http://www.w3.org/2000/svg" transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
@@ -22,7 +22,7 @@
           </svg>
           <span itemprop="name" class="visual-hide">.home()</span><span aria-label="Taha Bouras's Logo">Taha
             Bouras's Logo</span>
-        </a>
+        </NuxtLink>
         <div aria-label="Mobile Menu" class="nav-toggle"><span class="menu-trigger"><i
               class="menu-trigger-bar top"></i><i class="menu-trigger-bar middle"></i><i
               class="menu-trigger-bar bottom"></i></span></div>
@@ -33,13 +33,13 @@
 
 
           <li class="">
-            <a href="/" data-destination="home" rel="nofollow">
+            <NuxtLink to="/" data-destination="home" rel="nofollow">
               <span aria-label="Back" class="nav-link-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="476.2" height="476.2" viewbox="174 -174.2 476.2 476.2">
                   <path d="M244.6 134.5l21.2-21.2-34.4-34.4h418.8v-30H231.4l34.4-34.4-21.2-21.2L174 63.9">
                   </path>
                 </svg></span>Turn Back Home
-            </a>
+            </NuxtLink>
           </li>
           <li>
             <a href="/#about" data-scroll itemprop="url" class="">.about()</a>
@@ -58,10 +58,10 @@
           <NuxtLink to="/" data-destination="home">.home()</NuxtLink>
         </li>
         <li>
-          <a href="/#about" data-scroll class="">.about()</a>
+          <NuxtLink to="/#about" data-scroll class="">.about()</NuxtLink>
         </li>
         <li>
-          <a href="/#portfolio" data-scroll class="">.portfolio()</a>
+          <NuxtLink to="/#portfolio" data-scroll class="">.portfolio()</NuxtLink>
         </li>
         <li>
           <a href="#" class="open-contact">.contact()</a>

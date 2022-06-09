@@ -264,8 +264,6 @@ export default {
     this.posts = await res.json()
   },
   fetchOnServer: false,
-
-
   name: "IndexPage",
   layout: "blog",
   head: {

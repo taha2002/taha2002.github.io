@@ -69,7 +69,7 @@
                         me</button></div>
             </div>
         </section>
-        <HomeBlog />
+        <!-- <HomeBlog /> -->
         <ContactForm />
 
 

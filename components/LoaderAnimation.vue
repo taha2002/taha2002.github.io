@@ -23,8 +23,50 @@
   </div>
 </template>
 
-<style>
-.nuxt-logo {
-  height: 180px;
+
+<script>
+export default {
+  created() {
+    console.log('created')
+
+  },
+  mounted() {
+    console.log('mounted')
+    this.animationManager()
+
+  },
+  methods: {
+    animationManager() {
+      setTimeout(() => {
+        AnimationManager.startLoadAnimation()
+      }, 1500);
+
+      document.onload = function () {        
+        Application.start()
+      };
+    },
+  },
+  head: {
+    link: [
+      {
+        rel: "stylesheet",
+        href:
+          "/css/loader.css"
+      },
+      {
+        rel: "stylesheet",
+        href:
+          "/css/application.css"
+      }
+    ],
+    script: [
+      {
+        src: "/js/application.js",
+        async: true,
+        crossorigin: "anonymous"
+      },
+    ]
+  }
+
 }
-</style>
+</script>

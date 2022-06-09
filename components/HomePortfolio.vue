@@ -10,7 +10,7 @@
             </div>
             <ul class="case-studies-list">
                 <li v-for="(post, index) in posts" :key="index" itemtype="http://schema.org/CreativeWork" itemscope>
-                    <a :href="'/work/' + post.slug" id="cerasa"
+                    <NuxtLink :to="'/work/' + post.slug" id="cerasa"
                         v-bind:style="{ 'background-image': 'url(' + post.img + ')' }" data-destination="cerasa"
                         itemprop="url" class="case-study">
                         <div class="case-study-mask"></div>
@@ -36,7 +36,7 @@
                                 </span>
                             </button>
                         </div>
-                    </a>
+                    </NuxtLink>
                 </li>
 
             </ul>

@@ -2,7 +2,7 @@
   <div>
     <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="main-navigation">
       <div class="content nav-content">
-        <a href="index.html" data-destination="home" itemprop="url" class="nav-logo">
+        <NuxtLink to="/" data-destination="home" itemprop="url" class="nav-logo">
           <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" version="1.0" width="256" height="256"
             viewBox="0 0 500.000000 500.000000" preserveAspectRatio="xMidYMid meet">
             <g xmlns="http://www.w3.org/2000/svg" transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
@@ -22,13 +22,13 @@
           </svg>
           <span itemprop="name" class="visual-hide">.home()</span><span aria-label="Taha Bouras's Logo">Taha
             Bouras's Logo</span>
-        </a>
+        </NuxtLink>
         <div aria-label="Mobile Menu" class="nav-toggle"><span class="menu-trigger"><i
               class="menu-trigger-bar top"></i><i class="menu-trigger-bar middle"></i><i
               class="menu-trigger-bar bottom"></i></span></div>
         <ul class="nav-links">
           <li>
-            <a href="/" data-destination="home">.home()</a>
+            <NuxtLink to="/" data-destination="home">.home()</NuxtLink>
           </li>
           <li itemprop="name">
             <a href="/#about" data-scroll itemprop="url" class="">.about()</a>
@@ -37,7 +37,7 @@
             <a href="/#portfolio" data-scroll itemprop="url" class="">.portfolio()</a>
           </li>
           <li itemprop="name">
-            <a href="/blog" data-scroll itemprop="url" class="">.blog()</a>
+            <NuxtLink to="/blog" data-scroll itemprop="url" class="">.blog()</NuxtLink>
           </li>
 
           <li><a href="#" class=" open-contact">.contact()</a></li>
@@ -58,7 +58,7 @@
           <a href="/#portfolio" data-scroll class="">.portfolio()</a>
         </li>
         <li>
-          <a href="/blog" data-scroll class="">.blog()</a>
+          <NuxtLink to="/blog" data-scroll class="">.blog()</NuxtLink>
         </li>
         <li>
           <a href="#" class=" open-contact">.contact()</a>

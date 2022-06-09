@@ -22,16 +22,6 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        rel: "stylesheet",
-        href:
-          "/css/loader.css"
-      },
-      {
-        rel: "stylesheet",
-        href:
-          "/css/application.css"
-      },
-      {
         rel: "preconnect",
         href: "https://fonts.googleapis.com"
       },
@@ -47,12 +37,7 @@ export default {
     script: [
       {
         src: "/js/jquery.min.js"
-      },
-      {
-        src: "/js/application.js",
-        async: true,
-        crossorigin: "anonymous"
-      },
+      }
     ]
   },
 
