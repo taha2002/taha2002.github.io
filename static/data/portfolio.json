@@ -1,0 +1,26 @@
+[
+    {
+        "title": "hioo",
+        "description": "Leader in bathroom furniture since 1983.",
+        "img": "/img/cerasa-work.jpg",
+        "slug":"hioo",
+        "body":{
+            "role" : "",
+            "company" : "",
+            "period":"",
+            "context":"",
+            "longDescription" : "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional 'Made in Italy' quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants",
+            "projectLink" : ""
+        }
+    },
+    {
+        "title": "hii",
+        "description": "Leader in bathroom furniture since 1983.",
+        "img": "/img/cerasa-work.jpg",
+        "slug":"hii",
+        "body":{
+            "role" : "",
+            "company" : ""
+        }
+    }
+]

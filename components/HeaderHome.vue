@@ -27,41 +27,45 @@
               class="menu-trigger-bar top"></i><i class="menu-trigger-bar middle"></i><i
               class="menu-trigger-bar bottom"></i></span></div>
         <ul class="nav-links">
-          <li>
-            <a href="/" data-destination="home">.home()</a>
+          <!-- <li>
+            <NuxtLink to="/" data-destination="home">.home()</NuxtLink>
+          </li> -->
+          <li itemprop="name">
+            <a href="#about" data-scroll itemprop="url" class=" ">.about()</a>
           </li>
           <li itemprop="name">
-            <a href="/#about" data-scroll itemprop="url" class="">.about()</a>
+            <a href="#portfolio" data-scroll itemprop="url" class=" ">.portfolio()</a>
           </li>
           <li itemprop="name">
-            <a href="/#portfolio" data-scroll itemprop="url" class="">.portfolio()</a>
+            <a href="/blog" data-scroll itemprop="url" class=" ">.blog()</a>
           </li>
-          <li itemprop="name">
-            <a href="/blog" data-scroll itemprop="url" class="">.blog()</a>
-          </li>
-
           <li><a href="#" class=" open-contact">.contact()</a></li>
-          
+          <li class="">
+            <a href="#" id="change-theme" class=" "><svg xmlns="http://www.w3.org/2000/svg"
+                viewbox="0 0 285.919 285.919">
+                <path
+                  d="M142.959 0C64.131 0 0 64.132 0 142.96s64.131 142.959 142.959 142.959 142.96-64.131 142.96-142.959S221.787 0 142.959 0zm0 260.919V25c65.043 0 117.96 52.917 117.96 117.96 0 65.043-52.917 117.959-117.96 117.959z">
+                </path>
+              </svg></a>
+          </li>
         </ul>
       </div>
     </nav>
     <nav class="mobile-menu"><span aria-label="Close" class="close-trigger"><i class="close-trigger-bar left"></i><i
           class="close-trigger-bar right"></i></span>
       <ul class="mobile-nav-links">
+
         <li>
-          <NuxtLink to="/" data-destination="home">.home()</NuxtLink>
+          <a href="#about" data-scroll class="">.about()</a>
         </li>
         <li>
-          <a href="/#about" data-scroll class="">.about()</a>
+          <a href="#portfolio" data-scroll class="">.portfolio()</a>
         </li>
         <li>
-          <a href="/#portfolio" data-scroll class="">.portfolio()</a>
+          <a href="/blog">.blog()</a>
         </li>
         <li>
-          <a href="/blog" data-scroll class="">.blog()</a>
-        </li>
-        <li>
-          <a href="#" class=" open-contact">.contact()</a>
+          <a href="#" class="open-contact">.contact()</a>
         </li>
       </ul>
       <ul class="nav-social-stripe">

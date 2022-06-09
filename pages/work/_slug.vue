@@ -1,127 +1,178 @@
 <template>
     <div>
         <div id="single-work" itemscope itemtype="http://schema.org/CreativeWork" class="cerasa">
-            <header style="background-image: url('/img/cerasa-work.jpg');" id="top" class="hero-single-work">
+            <header v-bind:style="{ 'background-image': 'url(' + img + ')' }" id="top" class="hero-single-work">
                 <div class="hero-single-work-content">
                     <div class="text-loading-mask">
                         <div class="text-loading-overlay"></div>
-                        <h1 itemprop="name" class="hero-single-work-title">Cerasa Redesign</h1>
+                        <h1 itemprop="name" class="hero-single-work-title">{{ title }}</h1>
                     </div>
                     <div class="text-loading-mask">
                         <div style="transition-delay: 0.1s;" class="text-loading-overlay"></div>
-                        <h3 class="hero-single-work-subtitle">Leader in bathroom furniture since 1983.</h3>
+                        <h3 v-if="body.company" class="hero-single-work-subtitle">with {{ body.company }}</h3>
                     </div>
                 </div>
                 <div class="hero-single-context-stripe">
                     <div class="content">
-                        <ul class="context-stripe-focus-area">
-                            <li><strong>Role</strong> <span class="stripe-baffle">Front-end Developer</span></li>
-                            <li><strong>Context</strong> <span class="stripe-baffle">Website Redesign</span></li>
-                            <li><strong>Period</strong> <span class="stripe-baffle">Middle 2015</span></li>
+                        <ul class="context-stripe-focus-area" style="display: flex; justify-content: center;">
+                            <li v-if="body.role"><strong>Role</strong> <span class="stripe-baffle">{{ body.role
+                            }}</span></li>
+                            <li v-if="body.context"><strong>Context</strong> <span class="stripe-baffle">{{ body.context
+                            }}</span></li>
+                            <li v-if="body.period"><strong>Period</strong> <span class="stripe-baffle">{{ body.period
+                            }}</span></li>
                         </ul>
                     </div>
                 </div>
-              
+
             </header>
             <main class="single-work">
                 <section class="single-work-intro-section">
-                    <div class="single-work-giga-text"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="100"
-                            viewbox="0 0 300 100">
-                            <path
-                                d="M136.692 73.79c-5.63 0-10.4-3.393-12.922-7.59-3.32-5.345-4.55-9.534-4.55-15.9 0-4.625.646-10.188 2.673-14.378 2.816-5.78 8.59-10.623 15.228-10.623 10.108 0 16.317 8.092 17.54 17.485h1.3V25.95h-1.156l-1.23 1.66s-1.41 1.353-2.395.626c-4.38-2.66-8.74-4.428-14.052-4.428-15.16 0-26 10.957-26 26.062 0 15.683 9.684 25.41 25.347 25.41 5.76 0 11.1-1.817 15.786-4.993.41-.28.627.15.627.15l1.782 2.993h1.516V57.31h-1.374c-1.73 9.033-8.014 16.48-18.12 16.48M187.85 63.69l-1.23-.36c-1.803 4.34-6.21 7.163-10.903 7.163-7.65 0-12.78-5.495-12.78-13.092 0-1.373.144-2.747.36-4.127h23.424s.66-.422.19-1.96c-1.863-6.045-7.535-8.88-14.01-8.88-8.95 0-15.424 7.732-15.424 16.41 0 9.766 5.897 16.432 15.643 16.432 7.44.005 12.418-4.783 14.73-11.584m-15.67-19.763c4.006 0 6.094 2.55 6.352 5.93.13 1.674-.973 1.763-.973 1.763H163.8c1.382-3.993 3.687-7.693 8.38-7.693">
-                            </path>
-                            <path
-                                d="M190.285 51.687V69.92c0 3.748-.94 3.748-4.047 3.966v1.394h14.37v-1.394c-3.685-.218-4.624-.218-4.624-3.965V50.824c0-1.15 2.673-3.17 3.897-3.17 1.878 0 3.11 1.225 4.26 1.225 1.516 0 2.747-1.156 2.747-2.734 0-2.217-1.734-3.292-3.83-3.292-3.107 0-5.413 3.367-7.222 5.448v-5.162c-2.96 1.143-5.85 2.652-8.882 3.652v.714c2.536 1.224 3.332 1.374 3.332 4.183M209.723 54.27c3.115 0 3.693-1.95 3.693-4.705 0-.72-.075-1.156-.075-1.59 0-1.885 3.755-3.476 6.36-3.476 2.673 0 4.482.87 4.482 3.767v7.917c-5.87 2.537-16.547 5.006-16.547 12.983 0 3.47 3.088 6.12 6.407 6.12 4.496 0 6.815-2.434 10.215-4.957.075 2.523 2.3 4.958 4.958 4.958 3.435 0 4.87-2.006 5.23-5.468l-1.156-.048c-.212.94-.858 2.462-2 2.462-1.647 0-1.647-2.176-1.647-3.4V49.42c0-4.346-2.374-6.992-6.76-6.992-4.264 0-9.467 2.217-12.718 4.965-1.517 1.306-2.605 2.822-2.605 4.414-.007 1.155.857 2.46 2.163 2.46m14.452 14.454c-2.102 1.598-3.7 2.83-6.448 2.83-3.04 0-5.216-2.47-5.216-5.442 0-4.496 8.407-6.89 11.665-8.345v10.957zM256.93 65.507c0-10.555-16.302-10.338-16.302-16.547 0-2.96 1.966-5.128 5.02-5.128 4.855 0 7.76 4.19 8.636 8.522h1.156v-7.65c-3.047-1.09-6.243-2.26-9.508-2.26-4.863 0-9.848 2.762-9.848 8.176 0 5.053 3.537 6.788 7.597 9.1 3.3 1.89 7.795 3.265 7.795 7.665 0 4.115-2.102 6.502-6.305 6.502-5.51 0-6.958-5.196-8.257-9.46h-.83v8.522c2.856 1.672 5.97 2.332 9.236 2.332 5.93-.002 11.61-3.198 11.61-9.775M286.018 69.764c-.21.94-.857 2.462-2 2.462-1.646 0-1.646-2.176-1.646-3.4V49.42c0-4.346-2.374-6.992-6.76-6.992-4.264 0-9.46 2.217-12.718 4.965-1.517 1.306-2.605 2.822-2.605 4.414 0 1.155.87 2.46 2.17 2.46 3.114 0 3.692-1.95 3.692-4.705 0-.72-.075-1.156-.075-1.59 0-1.885 3.754-3.476 6.36-3.476 2.672 0 4.48.87 4.48 3.767v7.917c-5.868 2.537-16.546 5.006-16.546 12.983 0 3.47 3.09 6.12 6.408 6.12 4.496 0 6.815-2.434 10.215-4.957.075 2.523 2.3 4.958 4.958 4.958 3.43 0 4.87-2.006 5.23-5.468l-1.162-.056zm-9.1-1.04c-2.102 1.598-3.7 2.83-6.448 2.83-3.04 0-5.216-2.47-5.216-5.442 0-4.496 8.406-6.89 11.664-8.345v10.957zM39.265 74.552c-5.63 0-10.4-3.394-12.922-7.59-3.32-5.346-4.55-9.535-4.55-15.9 0-4.626.646-10.19 2.673-14.38 2.816-5.78 8.59-10.622 15.228-10.622 10.107 0 16.316 8.093 17.54 17.486h1.3V26.713h-1.157l-1.23 1.66s-1.41 1.352-2.395.625c-4.38-2.66-8.74-4.428-14.058-4.428-15.16 0-25.994 10.957-25.994 26.062 0 15.683 9.685 25.41 25.348 25.41 5.76 0 11.1-1.817 15.786-4.993.408-.28.626.15.626.15l1.782 2.992h1.517V58.08h-1.375c-1.736 9.032-8.013 16.472-18.12 16.472M83.01 74.552c5.63 0 10.4-3.394 12.922-7.59 3.32-5.346 4.55-9.535 4.55-15.9 0-4.626-.646-10.19-2.673-14.38-2.817-5.78-8.598-10.622-15.236-10.622-10.107 0-16.316 8.093-17.54 17.486h-1.3V26.713h1.157l1.232 1.66s1.408 1.352 2.394.625c4.38-2.66 8.74-4.428 14.058-4.428 15.16 0 25.994 10.957 25.994 26.062 0 15.683-9.678 25.41-25.348 25.41-5.76 0-11.1-1.817-15.786-4.993-.408-.28-.626.15-.626.15l-1.782 2.992H63.51V58.08h1.373c1.736 9.032 8.014 16.472 18.127 16.472">
-                            </path>
-                        </svg></div>
-                    <div class="content">
+                    <div class="single-work-giga-text">
+                        <svg xmlns="http://www.w3.org/2000/svg"  version="1.0" width="256" height="256"
+                            viewBox="0 0 500.000000 500.000000" preserveAspectRatio="xMidYMid meet">
+                            <g xmlns="http://www.w3.org/2000/svg"
+                                transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)" stroke="none"
+                                fill="#4c4f65">
+                                <path
+                                    d="M691 4880 c-119 -43 -220 -135 -275 -250 -29 -62 -31 -72 -34 -205 l-3 -140 155 -142 155 -143 1318 0 c1152 0 1326 -2 1378 -15 181 -48 332 -199 380 -380 61 -235 -59 -495 -276 -598 -109 -51 -151 -57 -439 -57 l-260 0 0 -449 0 -449 288 -4 c329 -4 348 -8 476 -95 271 -185 304 -564 70 -800 -68 -67 -170 -123 -262 -142 -31 -6 -163 -11 -312 -11 l-260 0 0 -451 0 -451 333 4 c316 4 337 6 437 31 293 72 505 189 706 391 272 272 414 613 414 990 0 343 -104 642 -313 903 l-68 85 49 56 c158 182 275 439 317 691 21 126 16 391 -10 511 -62 284 -189 516 -394 720 -171 170 -338 275 -550 344 -228 75 -122 71 -1621 73 -1309 2 -1346 2 -1399 -17z m275 -851 c15 -26 -6 -15 -37 18 l-34 36 32 -22 c18 -12 35 -27 39 -32z">
+                                </path>
+                                <path d="M380 4131 l0 -131 121 0 122 0 -44 48 c-23 26 -78 85 -121 131 l-78 84 0 -132z">
+                                </path>
+                                <path
+                                    d="M1670 3347 l0 -433 393 -361 c215 -198 418 -384 450 -413 l57 -52 0 135 0 135 -211 228 c-253 274 -279 303 -214 243 28 -25 134 -123 238 -218 l187 -173 0 671 0 671 -450 0 -450 0 0 -433z">
+                                </path>
+                                <path
+                                    d="M1670 2676 l1 -201 447 -419 447 -418 3 136 3 136 -382 413 c-211 226 -413 444 -451 483 l-68 72 0 -202z">
+                                </path>
+                                <path
+                                    d="M1672 2175 l3 -189 420 -388 c231 -214 432 -397 448 -409 l27 -20 -1 123 0 123 -435 460 c-239 253 -441 467 -450 475 -13 13 -14 -7 -12 -175z">
+                                </path>
+                                <path
+                                    d="M1670 1731 l0 -140 378 -348 c207 -191 380 -352 384 -358 13 -17 9 -59 -8 -83 -15 -21 -47 -28 -78 -16 -12 5 -205 209 -633 673 l-42 46 0 -115 0 -115 184 -168 c102 -92 185 -174 185 -182 0 -8 -9 -19 -21 -25 -23 -13 -42 4 -247 225 l-102 110 2 -405 3 -405 34 -70 c45 -91 124 -171 216 -216 l69 -34 288 -3 288 -3 0 405 0 405 -446 480 c-245 265 -447 481 -450 481 -2 0 -4 -63 -4 -139z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="content" v-if="body.longDescription">
                         <h2 class="single-work-intro-title"><span data-letters="The Project">The Project</span></h2>
                         <div class="single-work-intro-text single-work-anim-text">
-                            <p itemprop="description">Cerasa is composed of an established team of Italian master
-                                craftsmen that produces and puts up bathrooms undisputed of exceptional "Made in Italy"
-                                quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit
-                                the style of the house and its inhabitants.</p>
+                            <p itemprop="description">{{ body.longDescription }}</p>
                         </div>
-                        <div class="button-content single-work-anim-text"><a href="http://cerasa.it/" target="_blank"
-                                rel="noopener" class="the-button ghost no-smoothState"><span class="button-text">Visit
-                                    Website</span><span class="button-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewbox="0 0 476.213 476.213">
+                        <div class="button-content single-work-anim-text">
+                            <a v-if="body.projectLink" :href="body.projectLink" target="_blank" rel="noopener"
+                                class="the-button ghost no-smoothState">
+                                <span class="button-text">Visit Website
+                                </span>
+                                <span class="button-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
                                         <path
                                             d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
                                         </path>
-                                    </svg></span></a></div>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </section>
+                <div class="single-work-ui">
+                    <div class="content">
+                        <div class="section-text-mask">
+                            <h4 class="h5 section-subtitle">UI &amp; Components.</h4>
+                        </div>
+                        <div class="section-text-mask">
+                            <h2 class="h3 section-title">Design</h2>
+                        </div>
+                        <div class="inner-container single-work-ui-row single-work-anim-text">
+                            <div class="single-work-ui-image"><img src="/img/cerasa-ui.png" alt="cerasa ui description"
+                                    itemprop="image"></div>
+                            <div class="single-work-ui-image"><img src="/img/cerasa-pagination.png"
+                                    alt="cerasa ui pagination"></div>
+                        </div>
+                    </div>
+                </div>
                 <section class="single-work-section">
                     <div class="section-mask"></div>
                     <div class="content">
                         <div class="section-text-mask">
-                            <h4 class="h5 section-subtitle">Analysis & Preparation</h4>
+                            <h4 class="h5 section-subtitle">Language & Technology used</h4>
                         </div>
-                        <div class="section-text-mask">
-                            <h2 class="h3 section-title">Branding</h2>
+
+                        <div class="skills">
+                            <p class="about-me-text"></p>
+                            <ul class="about-me-list">
+                                <li class="react">
+                                    <div class="about-me-list-label">React.js</div><svg viewBox="0 0 128 128">
+                                        <path
+                                            d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3-12.5 4.8-19.3 11.4-19.3 18.8s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zm-14.8-30.5c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zm-11.2 59.3c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zm-25.6 27.1c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zm25.6-27.1c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zm-54.5-16.2c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zm-24.7 29c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5-13.8-4-22.1-10-22.1-15.6zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zm60.8-20.3c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li class="uiux">
+                                    <div class="about-me-list-label">UI/UX</div><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="128" height="128" viewBox="0 0 128 128">
+                                        <path
+                                            d="M74.6 96.7c1 0 1.9-.8 1.9-1.9s-.9-1.8-1.9-1.8H50.4c-1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9h24.2zM83.9 100.4H41.1c-1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9H84c1 0 1.9-.8 1.9-1.9s-.9-1.9-2-1.9zM20.6 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7 3.7 1.7 3.7 3.7-1.7 3.7-3.7 3.7zM37.3 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7c2.1 0 3.7 1.7 3.7 3.7S39.4 24 37.3 24zM54.1 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7c2.1 0 3.7 1.7 3.7 3.7S56.2 24 54.1 24z">
+                                        </path>
+                                        <path
+                                            d="M7.5 7.2V119h111.8V7.2H7.5zm3.7 3.8h104.4v18.6H11.2V11zm104.4 104.3H11.2v-82h104.4v82z">
+                                        </path>
+                                        <path
+                                            d="M47.5 81.4l1.7 1.4c.1 0 .1.1.2.1.4.3.7.5 1.1.7.2.1.5.3.7.4.4.2.7.4 1.1.6.3.2.6.3.9.5.3.1.6.3.9.4.6.3 1.3.5 1.9.7.2.1.5.1.7.2.5.1 1 .3 1.5.4.3.1.5.1.8.2.5.1 1 .2 1.5.2.2 0 .5.1.7.1.7.1 1.5.1 2.2.1s1.5 0 2.2-.1c.2 0 .5-.1.7-.1.5-.1 1-.1 1.5-.2.3 0 .5-.1.8-.1.5-.1 1-.2 1.5-.4.2-.1.4-.1.7-.2.6-.2 1.3-.4 1.9-.7.3-.1.6-.3.9-.4.3-.2.7-.3 1-.5.4-.2.7-.4 1-.6.2-.1.5-.3.7-.4.4-.2.7-.5 1.1-.7.1 0 .1-.1.2-.1l1.9-1.4-.1-.1c5.1-4.4 8.3-10.9 8.3-18.2C87.7 49.8 76.8 39 63.5 39S39.2 49.8 39.2 63.1c0 7.3 3.2 13.8 8.3 18.3zM58.4 83c-.7-.2-1.5-.4-2.2-.7-.1 0-.2-.1-.2-.1-.7-.3-1.5-.6-2.2-1l4.5-2.5c1.4-.8 2.3-2.2 2.3-3.8v-3.1l-.4-.5s-1.5-1.8-2.1-4.3l-.2-.9-.6-.4.1-2.8.6-.6v-4.9c0-.1-.1-1.4.8-2.5.9-1 2.5-1.5 4.8-1.5s3.9.5 4.8 1.5c1 1.1.8 2.4.8 2.5v4.1l.1.9.6.6v2.7c0 .1-.1.1-.1.1l-.9.3-.3.9c-.4 1.3-1 2.5-1.8 3.5-.2.2-.3.5-.5.6l-.5.5V75c0 1.6.9 3.1 2.4 3.9l4.8 2.4h-.1c-.7.3-1.3.6-2 .9-.1 0-.2.1-.3.1-.7.3-1.4.5-2.2.7-3.4.8-6.7.8-10 0 .1 0 0 0 0 0zm5-40.4c11.3 0 20.5 9.2 20.5 20.5 0 6.4-2.9 12.1-7.5 15.8-.1-.1-.2-.1-.3-.2l-6.5-3.2c-.2-.1-.3-.3-.3-.5v-1.9c.1-.1.2-.2.3-.4.8-1.1 1.5-2.4 2-3.8 1.1-.7 1.8-1.9 1.8-3.3v-2.7c0-.8-.2-1.5-.7-2.2v-3.1c.1-.7.1-3.1-1.7-5.2-1.6-1.8-4.2-2.8-7.6-2.8s-6 .9-7.6 2.8C54 54.5 54 57 54.1 57.6v3.1c-.4.6-.7 1.4-.7 2.2v2.7c0 1 .4 2 1.1 2.7.6 2.1 1.6 3.8 2.2 4.6V75c0 .2-.1.4-.3.5l-6 3.3c-.1 0-.1.1-.2.1-4.5-3.8-7.4-9.4-7.4-15.8.1-11.3 9.3-20.5 20.6-20.5z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li class="css-code">
+                                    <div class="about-me-list-label">is Fun.</div><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <path fill="#444"
+                                            d="M16.017 21.044zM4.743 3.519L6.792 26.5l9.194 2.552 9.22-2.556 2.051-22.977H4.743zM23 8.775l-.693 7.767-.48 5.359-.042.476-5.781 1.603-5.773-1.603-.395-4.426h2.829l.201 2.248 3.142.847.008-.002h.002l3.134-.846.329-3.655h-6.579l-.056-.633-.129-1.429-.067-.756h7.081l.258-2.886H9.203l-.056-.634-.129-1.429-.067-.756h14.118l-.068.756z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li class="uiux">
+                                    <div class="about-me-list-label">UI/UX</div><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="128" height="128" viewBox="0 0 128 128">
+                                        <path
+                                            d="M74.6 96.7c1 0 1.9-.8 1.9-1.9s-.9-1.8-1.9-1.8H50.4c-1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9h24.2zM83.9 100.4H41.1c-1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9H84c1 0 1.9-.8 1.9-1.9s-.9-1.9-2-1.9zM20.6 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7 3.7 1.7 3.7 3.7-1.7 3.7-3.7 3.7zM37.3 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7c2.1 0 3.7 1.7 3.7 3.7S39.4 24 37.3 24zM54.1 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7c2.1 0 3.7 1.7 3.7 3.7S56.2 24 54.1 24z">
+                                        </path>
+                                        <path
+                                            d="M7.5 7.2V119h111.8V7.2H7.5zm3.7 3.8h104.4v18.6H11.2V11zm104.4 104.3H11.2v-82h104.4v82z">
+                                        </path>
+                                        <path
+                                            d="M47.5 81.4l1.7 1.4c.1 0 .1.1.2.1.4.3.7.5 1.1.7.2.1.5.3.7.4.4.2.7.4 1.1.6.3.2.6.3.9.5.3.1.6.3.9.4.6.3 1.3.5 1.9.7.2.1.5.1.7.2.5.1 1 .3 1.5.4.3.1.5.1.8.2.5.1 1 .2 1.5.2.2 0 .5.1.7.1.7.1 1.5.1 2.2.1s1.5 0 2.2-.1c.2 0 .5-.1.7-.1.5-.1 1-.1 1.5-.2.3 0 .5-.1.8-.1.5-.1 1-.2 1.5-.4.2-.1.4-.1.7-.2.6-.2 1.3-.4 1.9-.7.3-.1.6-.3.9-.4.3-.2.7-.3 1-.5.4-.2.7-.4 1-.6.2-.1.5-.3.7-.4.4-.2.7-.5 1.1-.7.1 0 .1-.1.2-.1l1.9-1.4-.1-.1c5.1-4.4 8.3-10.9 8.3-18.2C87.7 49.8 76.8 39 63.5 39S39.2 49.8 39.2 63.1c0 7.3 3.2 13.8 8.3 18.3zM58.4 83c-.7-.2-1.5-.4-2.2-.7-.1 0-.2-.1-.2-.1-.7-.3-1.5-.6-2.2-1l4.5-2.5c1.4-.8 2.3-2.2 2.3-3.8v-3.1l-.4-.5s-1.5-1.8-2.1-4.3l-.2-.9-.6-.4.1-2.8.6-.6v-4.9c0-.1-.1-1.4.8-2.5.9-1 2.5-1.5 4.8-1.5s3.9.5 4.8 1.5c1 1.1.8 2.4.8 2.5v4.1l.1.9.6.6v2.7c0 .1-.1.1-.1.1l-.9.3-.3.9c-.4 1.3-1 2.5-1.8 3.5-.2.2-.3.5-.5.6l-.5.5V75c0 1.6.9 3.1 2.4 3.9l4.8 2.4h-.1c-.7.3-1.3.6-2 .9-.1 0-.2.1-.3.1-.7.3-1.4.5-2.2.7-3.4.8-6.7.8-10 0 .1 0 0 0 0 0zm5-40.4c11.3 0 20.5 9.2 20.5 20.5 0 6.4-2.9 12.1-7.5 15.8-.1-.1-.2-.1-.3-.2l-6.5-3.2c-.2-.1-.3-.3-.3-.5v-1.9c.1-.1.2-.2.3-.4.8-1.1 1.5-2.4 2-3.8 1.1-.7 1.8-1.9 1.8-3.3v-2.7c0-.8-.2-1.5-.7-2.2v-3.1c.1-.7.1-3.1-1.7-5.2-1.6-1.8-4.2-2.8-7.6-2.8s-6 .9-7.6 2.8C54 54.5 54 57 54.1 57.6v3.1c-.4.6-.7 1.4-.7 2.2v2.7c0 1 .4 2 1.1 2.7.6 2.1 1.6 3.8 2.2 4.6V75c0 .2-.1.4-.3.5l-6 3.3c-.1 0-.1.1-.2.1-4.5-3.8-7.4-9.4-7.4-15.8.1-11.3 9.3-20.5 20.6-20.5z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li class="fun">
+                                    <div class="about-me-list-label">Semicolons.</div><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <path fill="#444"
+                                            d="M.384.67v31.296H31.68V.67H.384zm16.334 26.772c-.461.937-1.342 1.553-2.362 1.85-1.568.36-3.067.155-4.183-.515-.747-.458-1.33-1.163-1.725-1.975.794-.485 1.586-.973 2.38-1.458.021.009.083.122.167.268.303.509.565.869 1.08 1.121.506.172 1.615.283 2.044-.607.262-.452.178-1.936.178-3.545 0-2.529.012-5.016.012-7.576h2.927c0 2.688.015 5.383 0 8.067.006 1.645.149 3.14-.518 4.369zm12.144-.827c-1.017 3.481-6.691 3.594-8.957 1.294-.479-.541-.779-.824-1.065-1.449 1.205-.693 1.205-.693 2.377-1.371.637.979 1.226 1.517 2.285 1.737 1.437.175 2.883-.318 2.559-1.844-.333-1.247-2.942-1.55-4.718-2.883-1.803-1.211-2.225-4.153-.744-5.834.494-.622 1.336-1.086 2.219-1.309l.922-.119c1.77-.036 2.877.431 3.689 1.339.226.229.41.476.756 1.012-.943.601-.94.595-2.291 1.47-.289-.622-.767-1.012-1.273-1.181-.785-.238-1.776.021-1.981.851-.071.256-.056.494.057.916.318.726 1.386 1.041 2.344 1.481 2.758 1.119 3.689 2.317 3.918 3.745.22 1.229-.054 2.026-.095 2.145z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li class="fun">
+                                    <div class="about-me-list-label">Semicolons.</div><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <path fill="#444"
+                                            d="M.384.67v31.296H31.68V.67H.384zm16.334 26.772c-.461.937-1.342 1.553-2.362 1.85-1.568.36-3.067.155-4.183-.515-.747-.458-1.33-1.163-1.725-1.975.794-.485 1.586-.973 2.38-1.458.021.009.083.122.167.268.303.509.565.869 1.08 1.121.506.172 1.615.283 2.044-.607.262-.452.178-1.936.178-3.545 0-2.529.012-5.016.012-7.576h2.927c0 2.688.015 5.383 0 8.067.006 1.645.149 3.14-.518 4.369zm12.144-.827c-1.017 3.481-6.691 3.594-8.957 1.294-.479-.541-.779-.824-1.065-1.449 1.205-.693 1.205-.693 2.377-1.371.637.979 1.226 1.517 2.285 1.737 1.437.175 2.883-.318 2.559-1.844-.333-1.247-2.942-1.55-4.718-2.883-1.803-1.211-2.225-4.153-.744-5.834.494-.622 1.336-1.086 2.219-1.309l.922-.119c1.77-.036 2.877.431 3.689 1.339.226.229.41.476.756 1.012-.943.601-.94.595-2.291 1.47-.289-.622-.767-1.012-1.273-1.181-.785-.238-1.776.021-1.981.851-.071.256-.056.494.057.916.318.726 1.386 1.041 2.344 1.481 2.758 1.119 3.689 2.317 3.918 3.745.22 1.229-.054 2.026-.095 2.145z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li class="fun">
+                                    <div class="about-me-list-label">Semicolons.</div><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <path fill="#444"
+                                            d="M.384.67v31.296H31.68V.67H.384zm16.334 26.772c-.461.937-1.342 1.553-2.362 1.85-1.568.36-3.067.155-4.183-.515-.747-.458-1.33-1.163-1.725-1.975.794-.485 1.586-.973 2.38-1.458.021.009.083.122.167.268.303.509.565.869 1.08 1.121.506.172 1.615.283 2.044-.607.262-.452.178-1.936.178-3.545 0-2.529.012-5.016.012-7.576h2.927c0 2.688.015 5.383 0 8.067.006 1.645.149 3.14-.518 4.369zm12.144-.827c-1.017 3.481-6.691 3.594-8.957 1.294-.479-.541-.779-.824-1.065-1.449 1.205-.693 1.205-.693 2.377-1.371.637.979 1.226 1.517 2.285 1.737 1.437.175 2.883-.318 2.559-1.844-.333-1.247-2.942-1.55-4.718-2.883-1.803-1.211-2.225-4.153-.744-5.834.494-.622 1.336-1.086 2.219-1.309l.922-.119c1.77-.036 2.877.431 3.689 1.339.226.229.41.476.756 1.012-.943.601-.94.595-2.291 1.47-.289-.622-.767-1.012-1.273-1.181-.785-.238-1.776.021-1.981.851-.071.256-.056.494.057.916.318.726 1.386 1.041 2.344 1.481 2.758 1.119 3.689 2.317 3.918 3.745.22 1.229-.054 2.026-.095 2.145z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="inner-container">
-                            <div class="single-work-text-content is-left single-work-first-anim-blocks">
-                                <h3 class="single-work-content-title">An elegant design.</h3>
-                                <div class="single-work-content-separator"></div>
-                                <div class="single-work-content-desc">
-                                    <p>As the <strong>Front-end Developer</strong>, I was responsible of building the
-                                        entire UI for the new website, redefining the User Experience and studying new
-                                        interactions between the User and the Interface.</p>
-                                    <p>One of the most exciting experience was integrating the entire front-end system
-                                        with the <strong>Ruby on Rails Application</strong> and the change page
-                                        animation.</p>
-                                </div>
-                            </div>
-                            <div class="single-work-img-content single-work-first-anim-blocks"><img
-                                    src="/img/cerasa-wire.png" alt="Cerasa User Interface Example"></div>
-                        </div>
-                        <div class="inner-container color-palette-section">
-                            <div class="color-palette-container">
-                                <div style="background-color: #060c10;" class="color-palette"></div>
-                                <h5 class="color-palette-name">$ebony</h5>
-                            </div>
-                            <div class="color-palette-container">
-                                <div style="background-color: #333333;" class="color-palette"></div>
-                                <h5 class="color-palette-name">$mine-shaft</h5>
-                            </div>
-                            <div class="color-palette-container">
-                                <div style="background-color: #ededed;" class="color-palette"></div>
-                                <h5 class="color-palette-name">$gallery</h5>
-                            </div>
-                            <div class="color-palette-container">
-                                <div class="color-palette"></div>
-                                <h5 class="color-palette-name">$white</h5>
-                            </div>
-                            <div class="color-palette-container">
-                                <div style="background-color: #0069a6;" class="color-palette"></div>
-                                <h5 class="color-palette-name">$denim</h5>
-                            </div>
-                        </div>
-                        <div class="inner-container">
-                            <div style="background-image: url('/img/abril-fatface.png');"
-                                class="single-work-font single-work-first-anim-blocks"></div>
-                            <div style="background-image: url('/img/gotham.png');"
-                                class="single-work-font single-work-first-anim-blocks"></div>
-                        </div>
+
                     </div>
-                    <div class="single-work-ui">
-                        <div class="content">
-                            <div class="section-text-mask">
-                                <h4 class="h5 section-subtitle">UI &amp; Components.</h4>
-                            </div>
-                            <div class="section-text-mask">
-                                <h2 class="h3 section-title">Design</h2>
-                            </div>
-                            <div class="inner-container single-work-ui-row single-work-anim-text">
-                                <div class="single-work-ui-image"><img src="/img/cerasa-ui.png"
-                                        alt="cerasa ui description" itemprop="image"></div>
-                                <div class="single-work-ui-image"><img src="/img/cerasa-pagination.png"
-                                        alt="cerasa ui pagination"></div>
-                            </div>
-                        </div>
-                    </div>
+
                 </section>
                 <section class="section mobile-only">
                     <div class="section-mask"></div>
@@ -286,7 +337,8 @@
                     </div>
                 </div>
                 <div class="work-index-item">
-                    <div style="background-image: url('/img/sportland-work-anteprima.jpg');" class="works-index-section">
+                    <div style="background-image: url('/img/sportland-work-anteprima.jpg');"
+                        class="works-index-section">
                         <div class="works-index-number">04</div>
                     </div>
                     <div class="works-index-section">
@@ -363,38 +415,72 @@
                     </path>
                 </svg></span>Close
         </div>
-        <h1>Continent: {{ continent }}</h1>
-        <h2>Mountain: {{ mountain }}</h2>
-        <p>Path: {{ $route.path }}</p>
-        <NuxtLink to="/">Back to Mountains</NuxtLink>
+
     </div>
 </template>
 <script>
 export default {
-    layout:'blogSingle',
-    async asyncData({ params, redirect }) {
-        const mountains = await fetch(
-            'https://api.nuxtjs.dev/mountains'
-        ).then((res) => res.json())
+    data: () => ({
+        title: "",
+        slug: "",
+        img: "",
+        body: []
+    }),
+    layout: 'blogSingle',
+    // async asyncData({ params, redirect }) {
+    //     const mountains = await fetch('/data/portfolio.json').then((res) =>
+    //         res.json()
+    //     )
+    //     console.log('params', params)
+    //     const filteredMountain = mountains.find(
+    //         (el) =>
+    //             el.slug === params.slug
+    //     )
+    //     console.log('mountains', mountains)
+    //     if (filteredMountain) {
+    //         return {
+    //             slug: filteredMountain.continent,
+    //             title: filteredMountain.title
+    //         }
+    //     } else {
+    //         //   redirect('/')
+    //         return {
+    //             slug: 'hiiii',
+    //             title: 'byyyy'
+    //         }
+    //     }
+    // },
 
-        console.log('params',params)
-        const filteredMountain = mountains.find(
-            (el) =>
-                el.slug === params.slug
+    async fetch() {
+        const posts = await fetch('/data/portfolio.json').then((res) =>
+            res.json()
         )
-        console.log(mountains)
+
+        console.log(this.$route.params.slug);
+        const filteredMountain = posts.find(
+            (el) =>
+                el.slug === this.$route.params.slug
+        )
+        console.log('posts', posts)
         if (filteredMountain) {
-            return {
-                continent: filteredMountain.continent,
-                mountain: filteredMountain.title
-            }
+            this.slug = filteredMountain.continent
+            this.title = filteredMountain.title
+            this.body = filteredMountain.body
+            this.img = filteredMountain.img
         } else {
-            //   redirect('/')
-            return {
-                continent: 'hiiii',
-                mountain: 'byyyy'
-            }
+            this.$router.push('/')
         }
+
+    },
+    fetchOnServer: false,
+    // multiple components can return the same `fetchKey` and Nuxt will track them both separately
+    fetchKey: 'site-sidebar',
+    // alternatively, for more control, a function can be passed with access to the component instance
+    // It will be called in `created` and must not depend on fetched data
+    fetchKey(getCounter) {
+        // getCounter is a method that can be called to get the next number in a sequence
+        // as part of generating a unique fetchKey.
+        return this.someOtherData + getCounter('sidebar')
     }
 }
 </script>

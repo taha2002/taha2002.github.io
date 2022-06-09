@@ -27,21 +27,27 @@
               class="menu-trigger-bar top"></i><i class="menu-trigger-bar middle"></i><i
               class="menu-trigger-bar bottom"></i></span></div>
         <ul class="nav-links">
-          <li>
-            <a href="/" data-destination="home">.home()</a>
+          <!-- <li>
+            <NuxtLink to="/" data-destination="home">.home()</NuxtLink>
+          </li> -->
+
+
+          <li class="">
+            <a href="/" data-destination="home" rel="nofollow">
+              <span aria-label="Back" class="nav-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="476.2" height="476.2" viewbox="174 -174.2 476.2 476.2">
+                  <path d="M244.6 134.5l21.2-21.2-34.4-34.4h418.8v-30H231.4l34.4-34.4-21.2-21.2L174 63.9">
+                  </path>
+                </svg></span>Turn Back Home
+            </a>
           </li>
-          <li itemprop="name">
+          <li>
             <a href="/#about" data-scroll itemprop="url" class="">.about()</a>
           </li>
-          <li itemprop="name">
-            <a href="/#portfolio" data-scroll itemprop="url" class="">.portfolio()</a>
+          <li>
+            <a href="#" class=" open-contact">.contact()</a>
           </li>
-          <li itemprop="name">
-            <a href="/blog" data-scroll itemprop="url" class="">.blog()</a>
-          </li>
-
-          <li><a href="#" class=" open-contact">.contact()</a></li>
-          
+        
         </ul>
       </div>
     </nav>
@@ -58,10 +64,7 @@
           <a href="/#portfolio" data-scroll class="">.portfolio()</a>
         </li>
         <li>
-          <a href="/blog" data-scroll class="">.blog()</a>
-        </li>
-        <li>
-          <a href="#" class=" open-contact">.contact()</a>
+          <a href="#" class="open-contact">.contact()</a>
         </li>
       </ul>
       <ul class="nav-social-stripe">

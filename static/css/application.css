@@ -4800,7 +4800,7 @@ main {
 }
 
 .color-palette-section {
-    padding-top: 85px
+    padding-top: 0px
 }
 
 .color-palette-section .color-palette-container {
@@ -5563,4 +5563,30 @@ main {
 
 #about .go-next-label{
     color: #1c1d25 !important;
+}
+
+
+.bright-theme.blog .main-navigation.view-in-scroll{
+    background: #fff0
+}
+
+.bright-theme.blog .main-navigation.view-in-scroll .nav-logo svg path {
+    fill: #4c4f65
+}
+
+.bright-theme.blog .main-navigation.view-in-scroll .nav-links a {
+    color: #4c4f65
+}
+
+.bright-theme.blog .main-navigation.view-in-scroll .nav-links a .nav-link-icon svg path,
+.bright-theme.blog .main-navigation.view-in-scroll .nav-links a svg path {
+    fill: #4c4f65
+}
+
+.bright-theme.blog .main-navigation.view-in-scroll .nav-links a:hover {
+    color: #4c4f65
+}
+
+.bright-theme.blog .main-navigation.view-in-scroll .nav-links a:hover .nav-link-icon svg path {
+    fill: #4c4f65
 }

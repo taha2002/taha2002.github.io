@@ -863,8 +863,9 @@
 
 <script>
 export default {
+  
   name: 'IndexPage',
-  layout: 'blog',
+  // layout: 'portfolio',
 
   head: {
     link: [

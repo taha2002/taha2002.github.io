@@ -29,55 +29,8 @@ abbr[title] {
     text-decoration: underline dotted;
 }
 
-/**
-Add the correct font weight in Edge and Safari.
-*/
 
-b,
-strong {
-    font-weight: bolder;
-}
 
-/**
-1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-2. Correct the odd 'em' font sizing in all browsers.
-*/
-
-code,
-kbd,
-samp,
-pre {
-    font-family:
-        ui-monospace,
-        SFMono-Regular,
-        Consolas,
-        'Liberation Mono',
-        Menlo,
-        monospace;
-    /* 1 */
-    font-size: 1em;
-    /* 2 */
-}
-
-/**
-Add the correct font size in all browsers.
-*/
-
-small {
-    font-size: 80%;
-}
-
-/**
-Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
-*/
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
 
 sub {
     bottom: -0.25em;
@@ -397,19 +350,6 @@ textarea {
     color: inherit;
 }
 
-/**
- * Use the configured 'mono' font family for elements that
- * are expected to be rendered with a monospace font, falling
- * back to the system monospace stack if there is no configured
- * 'mono' font family.
- */
-
-pre,
-code,
-kbd,
-samp {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
 
 /**
  * 1. Make replaced elements `display: block` by default as that's
@@ -1549,7 +1489,7 @@ video {
 
 .aJ {
     --tw-text-opacity: 1;
-    color: rgba(74, 108, 247, var(--tw-text-opacity));
+    color: #f06449;
 }
 
 .a1S {
@@ -1686,7 +1626,7 @@ video {
 
 .sticky .menu-scroll.active {
     --tw-text-opacity: 1;
-    color: rgba(74, 108, 247, var(--tw-text-opacity));
+    color: #f06449;
 }
 
 .navbarTogglerActive>span:nth-child(1) {
@@ -1843,7 +1783,7 @@ video {
 
 .hover\:aJ:hover {
     --tw-text-opacity: 1;
-    color: rgba(74, 108, 247, var(--tw-text-opacity));
+    color: #f06449;
 }
 
 .hover\:a1g:hover {
@@ -1900,7 +1840,7 @@ video {
 
 .aG:hover .group-hover\:aJ {
     --tw-text-opacity: 1;
-    color: rgba(74, 108, 247, var(--tw-text-opacity));
+    color: #f06449;
 }
 
 .aG:hover .group-hover\:a1g {

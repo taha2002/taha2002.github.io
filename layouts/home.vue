@@ -1,13 +1,11 @@
 <template>
     <div>
         <LoaderAnimation />
-        
-        <div class="bright-theme blog" id="page-wrap">
-            <Header />
+        <div id="page-wrap">
+            <HeaderHome />
             <Nuxt />
         </div>
         <!-- footer -->
         <Footer />
     </div>
 </template>
-
