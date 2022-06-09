@@ -33,18 +33,42 @@ export default {
   mounted() {
     console.log('mounted')
     this.animationManager()
+    var hash = this.$root._route.hash
+
+    console.log('path', hash)
+
+    hash = this.getsection(hash)
+
+    window.addEventListener('load', (e) => {
+      console.log('scroll smoth')
+      if (hash) {
+        const element = document.getElementById(hash);
+        setTimeout(() => { element.scrollIntoView({ behavior: 'smooth' }) }, 2100);
+        console.log('scroll smoth')
+      }
+    })
 
   },
   methods: {
     animationManager() {
       setTimeout(() => {
+        Application.start()
         AnimationManager.startLoadAnimation()
+
       }, 1500);
 
-      document.onload = function () {        
-        Application.start()
-      };
+      // document.onload = function () {        
+      //   Application.start()
+      // };
     },
+    getsection(name, url) {
+      if (!url) url = location.href;
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regexS = "[\\#&]([^&#]*)";
+      var regex = new RegExp(regexS);
+      var results = regex.exec(url);
+      return results == null ? null : results[1];
+    }
   },
   head: {
     link: [

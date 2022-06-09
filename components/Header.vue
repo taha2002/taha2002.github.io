@@ -31,10 +31,10 @@
             <NuxtLink to="/" data-destination="home">.home()</NuxtLink>
           </li>
           <li itemprop="name">
-            <a href="/#about" data-scroll itemprop="url" class="">.about()</a>
+            <NuxtLink to="/#about" data-scroll itemprop="url" class="">.about()</NuxtLink>
           </li>
           <li itemprop="name">
-            <a href="/#portfolio" data-scroll itemprop="url" class="">.portfolio()</a>
+            <NuxtLink to="/#portfolio" data-scroll itemprop="url" class="">.portfolio()</NuxtLink>
           </li>
           <li itemprop="name">
             <NuxtLink to="/blog" data-scroll itemprop="url" class="">.blog()</NuxtLink>
@@ -52,10 +52,10 @@
           <NuxtLink to="/" data-destination="home">.home()</NuxtLink>
         </li>
         <li>
-          <a href="/#about" data-scroll class="">.about()</a>
+          <NuxtLink to="/#about" data-scroll class="">.about()</NuxtLink>
         </li>
         <li>
-          <a href="/#portfolio" data-scroll class="">.portfolio()</a>
+          <NuxtLink to="/#portfolio" data-scroll class="">.portfolio()</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/blog" data-scroll class="">.blog()</NuxtLink>

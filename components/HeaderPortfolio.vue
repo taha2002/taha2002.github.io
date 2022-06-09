@@ -42,7 +42,7 @@
             </NuxtLink>
           </li>
           <li>
-            <a href="/#about" data-scroll itemprop="url" class="">.about()</a>
+            <NuxtLink to="/#about" data-scroll itemprop="url" class="">.about()</NuxtLink>
           </li>
           <li>
             <a href="#" class=" open-contact">.contact()</a>
