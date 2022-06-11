@@ -113,7 +113,7 @@ var Util = function (t) {
 jQuery(document).on("ready", function () {
     // Application.start()
 });
-Application.befor()
+// Application.befor()
 
 
 function ga() {

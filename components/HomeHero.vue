@@ -12,17 +12,18 @@
                 <div>
                     <div class="text-loading-mask">
                         <div style="transition-delay: 0.1s;" class="text-loading-overlay"></div>
-                        <h3 itemprop="specialty" class="main-hero-subtitle h5">Back-end Developer
-                        </h3>
+                        <!-- <h3 itemprop="specialty" class="main-hero-subtitle h5">Back-end Developer</h3> -->
+                        <h3 itemprop="specialty" class=" h5">Back-end Developer</h3>
                     </div>
                 </div>
                 <div>
                     <div style="width: 175px;" class="text-loading-mask">
                         <div style="transition-delay: 0.15s;" class="text-loading-overlay"></div><a href="#"
-                            class="the-button call-to-button no-smoothstate open-contact"><span
-                                class="button-text">About Me</span>
-                            <div class="button-mask"></div><span class="button-icon"><svg
-                                    xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">
+                            class="the-button call-to-button no-smoothstate open-contact">
+                            <span class="button-text open-contact">Contact Me</span>
+                            <div class="button-mask"></div>
+                            <span class="button-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewbox="0 0 476.213 476.213">
                                     <path
                                         d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
                                     </path>
@@ -32,7 +33,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="shapes-mask">
             <!-- triangle--><svg xmlns="http://www.w3.org/2000/svg" width="37.196" height="32.213"
                 viewbox="0 0 37.196 32.213">

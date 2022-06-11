@@ -5599,3 +5599,23 @@ main {
 .bright-theme.blog .main-navigation.view-in-scroll .nav-links a:hover .nav-link-icon svg path {
     fill: #4c4f65
 }
+
+.reach-me{
+    position: absolute;
+    height: 200px;
+    bottom: 0px;
+}
+
+.reach-me-icons{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reach-me-icons a{
+    padding: 3px;
+}
+
+.contact-info{
+    height: 50vh;
+}
+

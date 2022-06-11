@@ -22,7 +22,7 @@
         </ul>
       </div>
       <div class="footer-copy">&copy;
-        Taha Bouras - <a href="mailto:info@riccardozanutta.com" class="no-smoothState">Contact</a>
+        Taha Bouras - <a href="mailto:tahadevbou@gmail.com" class="no-smoothState">Contact</a>
       </div>
     </div>
   </footer>
