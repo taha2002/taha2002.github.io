@@ -6,9 +6,8 @@
             <div v-for="(image, index) in images" :key="index" class="mySlides fade">
                 <div class="numbertext">{{ index + 1 }}/ {{ images.length }}</div>
                 <img :src="image" style="width:100%">
-                <div class="text">Caption Text</div>
+                <div class="text">{{image.cap}}</div>
             </div>
-
             <!-- Next and previous buttons -->
             <!-- <div class="prev" @click="plusSlides(-1)">&#10094;</div>
             <div class="next" @click="plusSlides(1)">&#10095;</div> -->
@@ -23,7 +22,7 @@
         <div class="slider-controler">
             <div @click="plusSlides(-1)" class="controler-prev">
                 <div class="con-prev">&#10094;</div>
-                <div class="">Prev</div>
+                <div class="">Previous</div>
             </div>
             <div @click="plusSlides(1)" class="controler-next">
                 <div class="con-next">&#10095;</div>
@@ -37,17 +36,14 @@
 <script>
 
 export default {
+    props: ['images'],
     data: () => ({
-        slideIndex: 1,
-        images: [
-            "https://www.w3schools.com/howto/img_mountains_wide.jpg",
-            "https://www.w3schools.com/howto/img_mountains_wide.jpg",
-            "https://www.w3schools.com/howto/img_mountains_wide.jpg",
-            "https://www.w3schools.com/howto/img_mountains_wide.jpg"
-        ]
+        slideIndex: 1
     }),
     mounted() {
+        console.log('images',this.images)
         this.showSlides(this.slideIndex)
+
     },
     methods: {
         plusSlides(n) {
@@ -71,7 +67,7 @@ export default {
             // for (i = 0; i < dots.length; i++) {
             //     dots[i].className = dots[i].className.replace(" active", "");
             // }
-            
+
             // dots[this.slideIndex - 1].className += " active";
         }
     }

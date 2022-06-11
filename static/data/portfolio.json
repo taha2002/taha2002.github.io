@@ -10,7 +10,11 @@
             "period": "",
             "context": "",
             "longDescription": "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional 'Made in Italy' quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants",
-            "projectLink": ""
+            "projectLink": "",
+            "images": [
+                "https://www.w3schools.com/howto/img_mountains_wide.jpg",
+                "https://www.w3schools.com/howto/img_mountains_wide.jpg"
+            ]
         },
         "skills": [
             "php",

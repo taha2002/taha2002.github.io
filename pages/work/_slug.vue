@@ -85,7 +85,9 @@
                         </div>
 
                         <div class="inner-container single-work-ui-row single-work-anim-text">
-                            <Slider />
+
+                            <Slider :images="images" />
+
                         </div>
 
                     </div>
@@ -365,6 +367,8 @@ export default {
         title: "",
         slug: "",
         img: "",
+        images: ["https://www.w3schools.com/howto/img_mountains_wide.jpg",
+            "https://www.w3schools.com/howto/img_mountains_wide.jpg"],
         skills: [],
         body: []
     }),
@@ -386,6 +390,7 @@ export default {
             this.title = filteredMountain.title
             this.body = filteredMountain.body
             this.img = filteredMountain.img
+            // this.images = filteredMountain.images
             this.skills = filteredMountain.skills
         } else {
             this.$router.push('/')
