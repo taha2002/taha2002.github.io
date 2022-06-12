@@ -87,6 +87,19 @@ export default {
                 href: "/css/ptailwind.css"
             }
         ]
+    },
+    mounted() {
+        console.log('mounted')
+        // this.$fetch()
+        // setTimeout(() => {
+
+        // }, 500);
+
+        document.addEventListener('load', () => {
+            console.log('page loaded')
+            AnimationManager.startLoadAnimation()
+            Application.start()
+        })
     }
 }
 
