@@ -6,7 +6,7 @@
             <div v-for="(image, index) in images" :key="index" class="mySlides fade">
                 <div class="numbertext">{{ index + 1 }}/ {{ images.length }}</div>
                 <img :src="image" style="width:100%">
-                <div class="text">{{image.cap}}</div>
+                <div class="text">{{ image.cap }}</div>
             </div>
             <!-- Next and previous buttons -->
             <!-- <div class="prev" @click="plusSlides(-1)">&#10094;</div>
@@ -36,12 +36,13 @@
 <script>
 
 export default {
+    
     props: ['images'],
     data: () => ({
         slideIndex: 1
     }),
     mounted() {
-        console.log('images',this.images)
+        console.log('slider created : images', this.images)
         this.showSlides(this.slideIndex)
 
     },
@@ -62,7 +63,8 @@ export default {
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            slides[this.slideIndex - 1].style.display = "block";
+
+            if (0 < slides.length) slides[this.slideIndex - 1].style.display = "block";
 
             // for (i = 0; i < dots.length; i++) {
             //     dots[i].className = dots[i].className.replace(" active", "");

@@ -3769,6 +3769,11 @@ section:after {
     clear: both
 }
 
+#page-wrap-no {
+    width: 100%;
+    min-height: 100%
+}
+
 #page-wrap {
     width: 100%;
     min-height: 100%
@@ -5565,7 +5570,8 @@ main {
     background: #1c1d25 !important;
 }
 
-.black .the-arrow:after , .black .the-arrow:before {
+.black .the-arrow:after,
+.black .the-arrow:before {
     background: #1c1d25 !important;
 }
 
@@ -5600,22 +5606,21 @@ main {
     fill: #4c4f65
 }
 
-.reach-me{
+.reach-me {
     position: absolute;
     height: 200px;
     bottom: 0px;
 }
 
-.reach-me-icons{
+.reach-me-icons {
     display: flex;
     flex-wrap: wrap;
 }
 
-.reach-me-icons a{
+.reach-me-icons a {
     padding: 3px;
 }
 
-.contact-info{
+.contact-info {
     height: 50vh;
 }
-

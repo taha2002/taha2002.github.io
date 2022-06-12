@@ -13,11 +13,11 @@
       </a>
       <div class="inner-container text-center">
         <ul class="footer-links">
-          <li><a href="https://twitter.com/RiccardoZanutta" target="_blank" rel="noopener">Twitter</a>
-          </li>
           <li><a href="https://it.linkedin.com/in/riccardozanutta" target="_blank" rel="noopener">Linkedin</a>
           </li>
-          <li><a href="https://github.com/Riccardo-Zanutta" target="_blank" rel="noopener">Github</a></li>
+          <li><a href="https://github.com/taha2002" target="_blank" rel="noopener">Github</a></li>
+          <li><a href="https://twitter.com/RiccardoZanutta" target="_blank" rel="noopener">Facebook</a>
+          </li>
           <li><a href="http://codepen.io/rickzanutta/" target="_blank" rel="noopener">Codepen</a></li>
         </ul>
       </div>

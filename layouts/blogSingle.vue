@@ -1,7 +1,10 @@
 <template>
     <div>
         <LoaderAnimation />
-        <div id="page-wrap">
+        <!-- <div class="bright-theme blog" id="page-wrap">
+
+        </div> -->
+        <div id="page-wrap-no">
             <HeaderPortfolio />
             <Nuxt />
         </div>
@@ -9,3 +12,9 @@
         <Footer />
     </div>
 </template>
+<style scoped>
+#page-wrap{
+    height: 803px;
+    width: 100%;
+}
+</style>
