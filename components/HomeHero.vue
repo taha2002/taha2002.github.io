@@ -109,7 +109,8 @@
             <link itemprop="url" href="index.html">
             <link itemprop="logo" href="icons/logo.svg">
 
-            <li><a href="https://www.linkedin.com/in/taha-bouras/" target="_blank" rel="noopener" itemprop="sameAs">
+            <li>
+                <a href="https://www.linkedin.com/in/taha-bouras/" target="_blank" rel="noopener" itemprop="sameAs">
                     <img src="/icons/linkdin-white.svg" />
                 </a>
             </li>
