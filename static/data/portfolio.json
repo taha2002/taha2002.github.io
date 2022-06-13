@@ -1,9 +1,9 @@
 [
     {
-        "title": "hioo",
+        "title": "Wordpress admin panel",
         "description": "Leader in bathroom furniture since 1983.",
         "img": "/img/wordpress-admin1.png",
-        "slug": "hioo",
+        "slug": "Wordpress_admin_panel",
         "body": {
             "role": "",
             "company": "",
@@ -12,7 +12,7 @@
             "longDescription": "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional 'Made in Italy' quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants",
             "projectLink": "",
             "images": [
-                "https://www.w3schools.com/howto/img_mountains_wide.jpg",
+                "/img/wordpress-admin2.png",
                 "https://www.w3schools.com/howto/img_mountains_wide.jpg"
             ]
         },
