@@ -61,14 +61,24 @@
         </div>
 
         <HomePortfolio />
-
-        <section class="section mobile-only">
+        <section class="section ">
+            <div class="section-mask"></div>
+            <div class="content">
+                <div class="button-content text-center">
+                    <button class="the-button call-to-button">
+                        <span class="button-text">View more</span>
+                        <div class="button-mask"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="section mobile-only">
             <div class="section-mask"></div>
             <div class="content">
                 <div class="button-content text-center"><button class="the-button button-big open-contact">Contact
                         me</button></div>
             </div>
-        </section>
+        </section> -->
         <!-- <HomeBlog /> -->
         <ContactForm />
 

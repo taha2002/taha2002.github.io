@@ -1,19 +1,22 @@
 [
     {
         "title": "Wordpress admin panel",
-        "description": "Leader in bathroom furniture since 1983.",
+        "description": "an easy-to-use admin panel.",
         "img": "/img/wordpress-admin1.png",
-        "slug": "Wordpress_admin_panel",
+        "slug": "wordpress_admin_panel",
         "body": {
             "role": "",
             "company": "",
-            "period": "",
-            "context": "",
-            "longDescription": "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional 'Made in Italy' quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants",
+            "period": "2022-2",
+            "context": "an easy-to-use admin panel.",
+            "longDescription": "is create an easy-to-use admin panel and is like SPA , switching between pages without refresh and simplify the panel",
             "projectLink": "",
             "images": [
+                "/img/wordpress-admin3.png",
+                "/img/wordpress-admin4.png",
                 "/img/wordpress-admin2.png",
-                "https://www.w3schools.com/howto/img_mountains_wide.jpg"
+                "/img/wordpress-admin5.png",
+                "/img/wordpress-admin6.png"
             ]
         },
         "skills": [

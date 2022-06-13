@@ -6,7 +6,7 @@
                 <h4 class="h5 section-subtitle">Portfolio</h4>
             </div>
             <div class="section-text-mask">
-                <h2 class="h3 section-title">Latest Works</h2>
+                <h2 class="h3 section-title">Some Things I’ve Built</h2>
             </div>
             <ul class="case-studies-list">
                 <li v-for="(post, index) in posts" :key="index" itemtype="http://schema.org/CreativeWork" itemscope>
