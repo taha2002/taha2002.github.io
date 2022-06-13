@@ -13,12 +13,12 @@
       </a>
       <div class="inner-container text-center">
         <ul class="footer-links">
-          <li><a href="https://it.linkedin.com/in/riccardozanutta" target="_blank" rel="noopener">Linkedin</a>
+          <li><a href="https://www.linkedin.com/in/taha-bouras/" target="_blank" rel="noopener">Linkedin</a>
           </li>
           <li><a href="https://github.com/taha2002" target="_blank" rel="noopener">Github</a></li>
-          <li><a href="https://twitter.com/RiccardoZanutta" target="_blank" rel="noopener">Facebook</a>
+          <li><a href="https://www.facebook.com/profile.php?id=100007522123943" target="_blank" rel="noopener">Facebook</a>
           </li>
-          <li><a href="http://codepen.io/rickzanutta/" target="_blank" rel="noopener">Codepen</a></li>
+          <li><a href="mailto:tahadevbou@gmail.com" target="_blank" rel="noopener">Email</a></li>
         </ul>
       </div>
       <div class="footer-copy">&copy;

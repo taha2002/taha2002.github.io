@@ -68,23 +68,23 @@
 
         <li>
           <a href="https://www.linkedin.com/in/taha-bouras/" target="_blank" rel="noopener" aria-label="Linkedin">
-            <img src="/icons/linkdin-white.svg" />
+            <img style="height: 23px; width: 23px;" src="/icons/linkdin-white.svg" />
           </a>
         </li>
         <li>
           <a href="https://github.com/taha2002" target="_blank" rel="noopener" aria-label="Github">
-            <img src="/icons/github-white.svg" />
+            <img style="height: 23px; width: 23px;" src="/icons/github-white.svg" />
           </a>
         </li>
         <li>
           <a href="https://www.facebook.com/profile.php?id=100007522123943" target="_blank" rel="noopener"
             aria-label="Facebook">
-            <img src="/icons/facebook-white.svg" />
+            <img style="height: 23px; width: 23px;" src="/icons/facebook-white.svg" />
           </a>
         </li>
         <li>
           <a href="mailto:tahadevbou@gmail.com" target="_blank" rel="noopener" aria-label="Email">
-            <img src="/icons/email-white.svg" />
+            <img style="height: 23px; width: 23px;" src="/icons/email-white.svg" />
           </a>
         </li>
       </ul>

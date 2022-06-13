@@ -83,10 +83,10 @@
                     <div class="single-work-ui">
                         <div class="content">
                             <div class="section-text-mask">
-                                <h4 class="h5 section-subtitle">UI &amp; Components.</h4>
+                                <h4 class="h5 section-subtitle">Design &amp; Pages.</h4>
                             </div>
                             <div class="section-text-mask">
-                                <h2 class="h3 section-title">Design</h2>
+                                <h2 class="h3 section-title">Gallery</h2>
                             </div>
 
                             <div class="inner-container single-work-ui-row single-work-anim-text">
@@ -245,3 +245,9 @@ export default {
     }
 }
 </script>
+
+<style>
+#page-wrap-no .main-navigation {
+    /* background: rgba(28, 29, 37, .9); */
+}
+</style>

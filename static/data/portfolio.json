@@ -2,7 +2,7 @@
     {
         "title": "hioo",
         "description": "Leader in bathroom furniture since 1983.",
-        "img": "/img/cerasa-work.jpg",
+        "img": "/img/wordpress-admin1.png",
         "slug": "hioo",
         "body": {
             "role": "",
@@ -23,13 +23,21 @@
         ]
     },
     {
-        "title": "hii",
+        "title": "On Demand Delivery",
         "description": "Leader in bathroom furniture since 1983.",
-        "img": "/img/cerasa-work.jpg",
-        "slug": "hii",
+        "img": "/img/on-demand_delivery.jpg",
+        "slug": "on-demand_delivery",
         "body": {
             "role": "",
-            "company": ""
+            "company": "",
+            "period": "2021",
+            "context": "learning project",
+            "longDescription": "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional 'Made in Italy' quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants",
+            "projectLink": "",
+            "images": [
+                "/img/on-demand_delivery2.png",
+                "/img/on-demand_delivery1.png"
+            ]
         },
         "skills": [
             "php",
