@@ -27,7 +27,7 @@
     },
     {
         "title": "On Demand Delivery",
-        "description": "Leader in bathroom furniture since 1983.",
+        "description": "store with a delivery system.",
         "img": "/img/on-demand_delivery.jpg",
         "slug": "on-demand_delivery",
         "body": {
@@ -35,7 +35,7 @@
             "company": "",
             "period": "2021",
             "context": "learning project",
-            "longDescription": "Cerasa is composed of an established team of Italian master craftsmen that produces and puts up bathrooms undisputed of exceptional 'Made in Italy' quality. Cerasa collections are designed to satisfy the most diverse housing styles, fit the style of the house and its inhabitants",
+            "longDescription": "store to sell products and handle the delivery with live driver tracking.",
             "projectLink": "",
             "images": [
                 "/img/on-demand_delivery2.png",
@@ -43,9 +43,11 @@
             ]
         },
         "skills": [
-            "php",
-            "wordpress",
-            "tailwind"
+            "django",
+            "bootstrap",
+            "vuejs",
+            "postgresql",
+            "stripe"
         ]
     }
 ]

@@ -25,7 +25,7 @@
                             <h3 itemprop="name" class="h2 case-study-title">{{ post.title }}</h3>
                             <h5 itemprop="description" class="case-study-subtitle">{{ post.description }}</h5>
                             <button class="the-button call-to-button">
-                                <span class="button-text">View more</span>
+                                <span class="button-text">View details</span>
                                 <div class="button-mask"></div>
                                 <span class="button-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 476.213 476.213">

@@ -1,11 +1,15 @@
+import axios from 'axios'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   generate: {
-    routes: [
-      '/blog/denali',
-      '/work/hioo'
-    ]
+    routes() {      
+      return axios.get('http://localhost:3000/data/portfolio.json').then(res => {
+        return res.data.map(project => {
+          return '/work/' + project.slug
+        })
+      })
+    }
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

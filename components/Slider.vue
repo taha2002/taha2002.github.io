@@ -86,6 +86,7 @@ export default {
     max-width: 1000px;
     position: relative;
     margin: auto;
+    margin-bottom: 10px;
 }
 
 /* Hide the images by default */

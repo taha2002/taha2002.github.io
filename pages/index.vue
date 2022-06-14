@@ -65,10 +65,12 @@
             <div class="section-mask"></div>
             <div class="content">
                 <div class="button-content text-center">
-                    <button class="the-button call-to-button">
-                        <span class="button-text">View more</span>
-                        <div class="button-mask"></div>
-                    </button>
+                    <NuxtLink to="/work/more">
+                        <button class="the-button call-to-button">
+                            <span class="button-text">View more</span>
+                            <div class="button-mask"></div>
+                        </button>
+                    </NuxtLink>
                 </div>
             </div>
         </section>

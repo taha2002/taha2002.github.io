@@ -44,17 +44,16 @@
             <NuxtLink to="/blog" data-scroll itemprop="url" class=" ">.blog()</NuxtLink>
           </li>
           <li><a href="#" class=" open-contact">.contact()</a></li>
-          <li class="">
-            <a href="#" id="change-theme" class=" ">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px"
-                height="23px" viewBox="0 0 12 12" version="1.1">
+          <li style="vertical-align: bottom;">
+            <a href="#" id="change-theme"><svg xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="23px" viewBox="0 0 12 12" version="1.1"
+                style="margin-bottom: 5px;">
                 <g id="surface3">
-                  <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
-                    d="M 6.019531 0 C 2.699219 0 0 2.699219 0 6.019531 C 0 9.339844 2.699219 12.039062 6.019531 12.039062 C 9.339844 12.039062 12.039062 9.339844 12.039062 6.019531 C 12.039062 2.699219 9.339844 0 6.019531 0 Z M 6.019531 10.984375 L 6.019531 1.050781 C 8.757812 1.050781 10.984375 3.28125 10.984375 6.019531 C 10.984375 8.757812 8.757812 10.984375 6.019531 10.984375 Z M 6.019531 10.984375 " />
+                  <path
+                    d="M 6.019531 0 C 2.699219 0 0 2.699219 0 6.019531 C 0 9.339844 2.699219 12.039062 6.019531 12.039062 C 9.339844 12.039062 12.039062 9.339844 12.039062 6.019531 C 12.039062 2.699219 9.339844 0 6.019531 0 Z M 6.019531 10.984375 L 6.019531 1.050781 C 8.757812 1.050781 10.984375 3.28125 10.984375 6.019531 C 10.984375 8.757812 8.757812 10.984375 6.019531 10.984375 Z M 6.019531 10.984375 "
+                    style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"></path>
                 </g>
-              </svg>
-            </a>
+              </svg></a>
           </li>
         </ul>
       </div>

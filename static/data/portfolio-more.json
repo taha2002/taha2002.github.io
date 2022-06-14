@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Wordpress admin panel",
+        "description": "an easy-to-use admin panel.",
+        "link": "/img/wordpress-admin1.png",
+        "github": "/img/git",
+        "skills": [
+            "php",
+            "wordpress",
+            "tailwind"
+        ]
+    },
+    {
+        "title": "On Demand Delivery",
+        "description": "store with a delivery system.",
+        "link": "/img/wordpress-admin1.png",
+        "github": "",
+        "skills": [
+            "django",
+            "bootstrap",
+            "vuejs",
+            "postgresql",
+            "stripe"
+        ]
+    }
+]
