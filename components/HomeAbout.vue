@@ -134,7 +134,7 @@
 
 export default {
     data: () => ({
-        skills: ['django', 'wordpress', 'vuejs', 'electron', 'php', 'bootstrap', 'tailwind','elenium','debian','git']
+        skills: ['django', 'wordpress', 'vuejs', 'electron', 'php', 'bootstrap', 'tailwind','selenium','debian','git']
     }),
 }
 </script>

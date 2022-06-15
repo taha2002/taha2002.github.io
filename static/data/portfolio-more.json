@@ -1,26 +1,52 @@
 [
     {
-        "title": "Wordpress admin panel",
-        "description": "an easy-to-use admin panel.",
+        "title": "Desktop app with php",
+        "description": "turn a php script to desktop app with electron js.",
         "link": "/img/wordpress-admin1.png",
         "github": "/img/git",
         "skills": [
-            "php",
-            "wordpress",
-            "tailwind"
+            "electron",
+            "php"
         ]
     },
     {
-        "title": "On Demand Delivery",
-        "description": "store with a delivery system.",
+        "title": "youtube video uploder bot",
+        "description": "a youtube bot you give him the title, description, tags and he handles the upload task.",
         "link": "/img/wordpress-admin1.png",
         "github": "",
         "skills": [
-            "django",
-            "bootstrap",
-            "vuejs",
-            "postgresql",
-            "stripe"
+            "python",
+            "selenium"
+        ]
+    },
+    {
+        "title": "wordpress plugins sync",
+        "description": "wordpress plugin to updtate plugin from github iam still work on it.",
+        "link": "https://www.instagram.com/choosecourse/",
+        "github": "",
+        "skills": [
+            "php",
+            "wordpress"
+        ]
+    },
+    {
+        "title": "Instagram management bot",
+        "description": "an Instagram bot get data from API to create images and post theme to accounts automatically.",
+        "link": "/img/wordpress-admin1.png",
+        "github": "",
+        "skills": [
+            "python",
+            "selenium"
+        ]
+    },
+    {
+        "title": "Instagram management bot",
+        "description": "an Instagram bot get data from API to create images and post theme to accounts automatically.",
+        "link": "/img/wordpress-admin1.png",
+        "github": "",
+        "skills": [
+            "python",
+            "selenium"
         ]
     }
 ]
