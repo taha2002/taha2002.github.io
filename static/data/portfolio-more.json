@@ -40,13 +40,13 @@
         ]
     },
     {
-        "title": "Instagram management bot",
-        "description": "an Instagram bot get data from API to create images and post theme to accounts automatically.",
+        "title": "admin beautifly",
+        "description": "wordpress plugin to add nice css styling to admin panel.",
         "link": "/img/wordpress-admin1.png",
         "github": "",
         "skills": [
-            "python",
-            "selenium"
+            "wordpress",
+            "php"
         ]
     }
 ]
