@@ -158,7 +158,7 @@ export default {
         console.log('mounted')
         // this.$fetch()
         setTimeout(() => {
-            AnimationManager.startLoadAnimation()
+            // AnimationManager.startLoadAnimation()
         }, 500);
     },
     activated() {

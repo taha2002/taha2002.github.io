@@ -119,3 +119,7 @@ jQuery(document).on("ready", function () {
 function ga() {
     console.log('welcom gas')
 }
+
+// // console.log('welcom gas')
+// // Application.start()
+// // AnimationManager.startLoadAnimation()

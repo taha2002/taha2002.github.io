@@ -109,8 +109,8 @@ export default {
 
         document.addEventListener('load', () => {
             console.log('page loaded')
-            AnimationManager.startLoadAnimation()
-            Application.start()
+            // AnimationManager.startLoadAnimation()
+            // Application.start()
         })
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <LoaderAnimation />
+        <LoaderAnimation :key="$route.path" />
         <div id="page-wrap">
             <Header />
             <Nuxt />

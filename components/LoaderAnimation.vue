@@ -31,8 +31,15 @@ export default {
 
   },
   mounted() {
-    console.log('mounted')
-    this.animationManager()
+    console.log('mounted loder')
+    setTimeout(() => {
+      console.log('animation handler')
+
+      AnimationManager.startLoadAnimation()
+      Application.start()
+
+    }, 1500);
+    // this.animationManager()
     var hash = this.$root._route.hash
 
     console.log('path', hash)
@@ -52,6 +59,7 @@ export default {
   methods: {
     animationManager() {
       setTimeout(() => {
+        console.log('animation handler')
         Application.start()
         AnimationManager.startLoadAnimation()
 
@@ -86,8 +94,9 @@ export default {
     script: [
       {
         src: "/js/application.js",
-        async: true,
-        crossorigin: "anonymous"
+        body: true,
+        // async: true,
+        // crossorigin: "anonymous"
       },
     ]
   }

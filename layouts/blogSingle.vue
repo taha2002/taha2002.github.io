@@ -1,6 +1,6 @@
 <template>
     <div>
-        <LoaderAnimation />
+        <LoaderAnimation :key="$route.path" />
         <!-- <div class="bright-theme blog" id="page-wrap">
 
         </div> -->

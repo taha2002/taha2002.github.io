@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <div class="slideshow-container">
 
             <!-- Full-width images with number and caption text -->
@@ -36,7 +37,7 @@
 <script>
 
 export default {
-    
+
     props: ['images'],
     data: () => ({
         slideIndex: 1
