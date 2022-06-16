@@ -92,7 +92,9 @@
 
 export default {
     layout: 'home',
+    
     head: {
+        title: 'Taha bou | backend devoloper',
         link: [
             {
                 rel: "stylesheet",

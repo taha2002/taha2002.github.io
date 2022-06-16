@@ -19,8 +19,8 @@
       <div class="contact-info">
 
         <div class="inner-container">
-          <form id="contact-form" method="post" action="https://riccardozanutta.com/mailer.php"
-            class="the-form no-smoothState">
+
+          <form id="contact-form" class="the-form no-smoothState">
             <div class="input required"><input type="text" id="name" name="name"><label class="label">Name</label></div>
             <div class="input required email"><input type="text" id="email" name="email"><label
                 class="label">E-mail</label></div>
@@ -50,8 +50,9 @@
         <div class="reach-me">
           <h3 class="h4 about-me-title">How to reach me:</h3>
           <p class="about-me-text">
-            By <strong>filling </strong>out the <strong>form</strong> below or through the following <strong>accounts</strong>. <strong>Happy</strong> to communicate with <strong>you</strong>.
-            
+            By <strong>filling </strong>out the <strong>form</strong> below or through the following
+            <strong>accounts</strong>. <strong>Happy</strong> to communicate with <strong>you</strong>.
+
           </p>
           <br>
           <div class="reach-me-icons">
@@ -83,6 +84,20 @@
 
 <script>
 export default {
-  name: 'ContactForm'
+  name: 'ContactForm',
+  head: {
+    script: [
+      {
+        src: "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js",
+        // body: true,
+        // async: true,
+        // crossorigin: "anonymous"
+      },
+      {
+        src: "/js/emailsender.js"
+      }
+    ]
+  }
+
 }
 </script>

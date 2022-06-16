@@ -3,7 +3,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   generate: {
-    routes() {      
+    routes() {
       return axios.get('http://localhost:3000/data/portfolio.json').then(res => {
         return res.data.map(project => {
           return '/work/' + project.slug
@@ -13,7 +13,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxtproject',
+    title: 'Taha bou | backend devoloper',
     htmlAttrs: {
       lang: 'en'
     },
