@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/work/on-demand_delivery", {data:[{}],fetch:{},mutations:[]});

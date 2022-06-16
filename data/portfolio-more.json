@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Desktop app with php",
+        "description": "turn a php script to desktop app with electron js.",
+        "link": "",
+        "github": "https://github.com/taha2002/electron-php",
+        "skills": [
+            "electron",
+            "php"
+        ]
+    },
+    {
+        "title": "youtube video uploder bot",
+        "description": "a youtube bot you give him the title, description, tags and he handles the upload task.",
+        "link": "",
+        "github": "",
+        "skills": [
+            "python",
+            "selenium"
+        ]
+    },
+    {
+        "title": "wordpress plugins sync",
+        "description": "wordpress plugin to updtate plugin from github iam still work on it.",
+        "link": "",
+        "github": "",
+        "skills": [
+            "php",
+            "wordpress"
+        ]
+    },
+    {
+        "title": "Instagram management bot",
+        "description": "an Instagram bot get data from API to create images and post theme to accounts automatically.",
+        "link": "https://www.instagram.com/choosecourse/",
+        "github": "",
+        "skills": [
+            "python",
+            "selenium"
+        ]
+    },
+    {
+        "title": "admin beautifly",
+        "description": "wordpress plugin to add nice css styling to admin panel.",
+        "link": "",
+        "github": "",
+        "skills": [
+            "wordpress",
+            "php"
+        ]
+    }
+]
