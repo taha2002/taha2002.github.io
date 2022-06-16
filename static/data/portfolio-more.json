@@ -2,8 +2,8 @@
     {
         "title": "Desktop app with php",
         "description": "turn a php script to desktop app with electron js.",
-        "link": "/img/wordpress-admin1.png",
-        "github": "/img/git",
+        "link": "",
+        "github": "https://github.com/taha2002/electron-php",
         "skills": [
             "electron",
             "php"
@@ -12,7 +12,7 @@
     {
         "title": "youtube video uploder bot",
         "description": "a youtube bot you give him the title, description, tags and he handles the upload task.",
-        "link": "/img/wordpress-admin1.png",
+        "link": "",
         "github": "",
         "skills": [
             "python",
@@ -22,7 +22,7 @@
     {
         "title": "wordpress plugins sync",
         "description": "wordpress plugin to updtate plugin from github iam still work on it.",
-        "link": "https://www.instagram.com/choosecourse/",
+        "link": "",
         "github": "",
         "skills": [
             "php",
@@ -32,7 +32,7 @@
     {
         "title": "Instagram management bot",
         "description": "an Instagram bot get data from API to create images and post theme to accounts automatically.",
-        "link": "/img/wordpress-admin1.png",
+        "link": "https://www.instagram.com/choosecourse/",
         "github": "",
         "skills": [
             "python",
@@ -42,7 +42,7 @@
     {
         "title": "admin beautifly",
         "description": "wordpress plugin to add nice css styling to admin panel.",
-        "link": "/img/wordpress-admin1.png",
+        "link": "",
         "github": "",
         "skills": [
             "wordpress",

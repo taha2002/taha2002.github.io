@@ -122,13 +122,7 @@
                         </div>
 
                     </section>
-                    <section class="section mobile-only">
-                        <div class="section-mask"></div>
-                        <div class="content">
-                            <div class="button-content text-center"><button
-                                    class="the-button button-big open-contact">Contact me</button></div>
-                        </div>
-                    </section>
+                    
                     <NuxtLink :to="'/work/' + next_post.slug" class="next-work">
                         <div class="content">
                             <h5 class="h5 next-work-lead">Next Project</h5>

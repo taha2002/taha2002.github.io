@@ -19,6 +19,20 @@ export default {
                 href: "/css/ptailwind.css"
             }
         ]
+    },
+    computed: {
+        name() {
+            
+            console.log('hiiiiiiiiiii')
+            return 'this.userInfo.name';
+        }
+    },
+    watch: {
+        name(newVal, oldVal) {
+            alert(newVal);
+            alert(oldVal);
+        }
     }
 }
 </script>
+

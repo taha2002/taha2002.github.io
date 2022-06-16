@@ -63,8 +63,8 @@
                                 {{ skills(post.skills) }}
                             </p>
                             <div>
-                                <span class="a1 a2 aZ a25">
-                                    <svg width="218" height="109" viewBox="0 0 218 109" fill="none"
+                                <span style="fill:#f06449;" class="a1 a2 aZ a25">
+                                    <svg width="218" height="109" viewBox="0 0 218 109" fill=""
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle opacity="0.05" cx="156.5" cy="-47.5" r="156.5"></circle>
                                         <circle opacity="0.08" cx="210" cy="6" r="62"></circle>
