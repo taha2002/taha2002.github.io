@@ -7,10 +7,14 @@ import remarkGfm from 'remark-gfm';
 import CodeBlock from '@/components/CodeBlock';
 
 export async function generateStaticParams() {
-    const posts = await getSortedPostsData();
-    return posts.map((post) => ({
-        slug: post.id,
-    }));
+    try {
+        const posts = await getSortedPostsData();
+        return posts.map((post) => ({
+            slug: post.id,
+        }));
+    } catch (error) {
+        return []
+    }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
