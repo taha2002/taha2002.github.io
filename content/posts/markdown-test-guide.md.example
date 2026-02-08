@@ -1,0 +1,215 @@
+---
+title: "Complete Markdown Guide: Testing All Features"
+date: "2024-01-15"
+excerpt: "A comprehensive showcase of all markdown features including syntax highlighting, tables, images, and more."
+category: "Tutorial"
+readTime: "8 min read"
+---
+
+# Complete Markdown Feature Test
+
+This article demonstrates all markdown features supported in this blog.
+
+## Code Blocks with Syntax Highlighting
+
+### JavaScript Example
+
+```javascript
+// Example: Async data fetching
+async function fetchUserData(userId) {
+    try {
+        const response = await fetch(`/api/users/${userId}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Failed to fetch user:', error);
+        throw error;
+    }
+}
+
+// Usage
+fetchUserData(123)
+    .then(user => console.log(user))
+    .catch(err => console.error(err));
+```
+
+### Python Example
+
+```python
+# Example: Class with decorators
+class DatabaseConnection:
+    def __init__(self, host, port):
+        self.host = host
+        self.port = port
+        self._connection = None
+    
+    @property
+    def is_connected(self):
+        return self._connection is not None
+    
+    def connect(self):
+        """Establish database connection"""
+        print(f"Connecting to {self.host}:{self.port}")
+        # Connection logic here
+        return True
+
+# Usage
+db = DatabaseConnection("localhost", 5432)
+db.connect()
+```
+
+### TypeScript Example
+
+```typescript
+// Example: Generic types and interfaces
+interface ApiResponse<T> {
+    data: T;
+    status: number;
+    message: string;
+}
+
+async function fetchData<T>(url: string): Promise<ApiResponse<T>> {
+    const response = await fetch(url);
+    return await response.json();
+}
+
+type User = {
+    id: number;
+    name: string;
+    email: string;
+};
+
+const users = await fetchData<User[]>('/api/users');
+console.log(users.data);
+```
+
+### Bash Example
+
+```bash
+#!/bin/bash
+# Example: System monitoring script
+
+# Check disk usage
+df -h | grep -v tmpfs
+
+# Monitor process
+ps aux | grep nginx | awk '{print $2, $11}'
+
+# Loop through files
+for file in *.log; do
+    echo "Processing: $file"
+    gzip "$file"
+done
+```
+
+## Text Formatting
+
+This is **bold text** and this is *italic text*. You can also use ~~strikethrough~~ and combine them: ***bold and italic***.
+
+Inline `code snippets` look like this.
+
+> This is a blockquote. It can span multiple lines and is useful for highlighting important information or quotes from documentation.
+>
+> — Anonymous Developer
+
+## Lists
+
+### Unordered List
+
+- First item
+- Second item
+  - Nested item 1
+  - Nested item 2
+    - Deeply nested
+- Third item
+
+### Ordered List
+
+1. First step
+2. Second step
+   1. Sub-step A
+   2. Sub-step B
+3. Third step
+
+### Task List
+
+- [x] Completed task
+- [x] Another completed task
+- [ ] Pending task
+- [ ] Future task
+
+## Tables
+
+| Feature | Status | Priority |
+|---------|--------|----------|
+| Syntax Highlighting | ✅ Working | High |
+| Tables | ✅ Working | Medium |
+| Images | ✅ Working | Medium |
+| Code Blocks | ✅ Working | High |
+
+## Links
+
+[Visit GitHub](https://github.com) or check out [Next.js Documentation](https://nextjs.org/docs).
+
+You can also use reference-style links: [Reference Link][ref-link]
+
+[ref-link]: https://example.com "Example Site"
+
+## Horizontal Rules
+
+---
+
+## Headings Hierarchy
+
+### Heading Level 3
+#### Heading Level 4
+##### Heading Level 5
+###### Heading Level 6
+
+## Advanced Code Examples
+
+### SQL Query
+
+```sql
+-- Complex JOIN query
+SELECT 
+    u.id,
+    u.username,
+    COUNT(p.id) as post_count,
+    AVG(p.views) as avg_views
+FROM users u
+LEFT JOIN posts p ON u.id = p.user_id
+WHERE u.created_at >= '2024-01-01'
+GROUP BY u.id, u.username
+HAVING COUNT(p.id) > 5
+ORDER BY avg_views DESC
+LIMIT 10;
+```
+
+### JSON Example
+
+```json
+{
+  "name": "portfolio-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build"
+  }
+}
+```
+
+## Conclusion
+
+This article demonstrates all major markdown features including:
+- ✅ Syntax highlighted code blocks
+- ✅ Tables and lists
+- ✅ Text formatting
+- ✅ Links and references
+- ✅ Blockquotes and horizontal rules
+
+All features should render correctly with proper styling and syntax highlighting!

@@ -1,0 +1,180 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Inter', 'sans-serif';
+    --font-mono: 'JetBrains Mono', 'monospace';
+
+    --color-terminal-bg: var(--bg);
+    --color-terminal-panel: var(--panel);
+    --color-terminal-border: var(--border);
+    --color-terminal-header: var(--header);
+    --color-terminal-body: var(--body);
+    --color-terminal-green: var(--accent-green);
+    --color-terminal-cyan: var(--accent-cyan);
+    --color-terminal-purple: var(--accent-purple);
+    --color-terminal-yellow: var(--accent-yellow);
+
+    --animate-cursor-blink: blink 1s step-end infinite;
+    --animate-fade-in: fadeIn 0.5s ease-out forwards;
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@layer base {
+    :root {
+        /* Light Mode (Engineering Lab Theme) */
+        --bg: #f8fafc;
+        /* Slate 50 */
+        --panel: #ffffff;
+        /* White */
+        --border: #cbd5e1;
+        /* Slate 300 */
+        --header: #0f172a;
+        /* Slate 900 */
+        --body: #475569;
+        /* Slate 600 */
+        --accent-green: #16a34a;
+        --accent-cyan: #0891b2;
+        --accent-purple: #7c3aed;
+        --accent-yellow: #ca8a04;
+    }
+
+    .dark {
+        /* Dark Mode (Cyber Terminal Theme) */
+        --bg: #0a0a0c;
+        --panel: #131318;
+        --border: #2a2a35;
+        --header: #ffffff;
+        --body: #e2e8f0;
+        /* Slate 200 - Brightened for better contrast */
+        --accent-green: #22c55e;
+        --accent-cyan: #06b6d4;
+        --accent-purple: #8b5cf6;
+        --accent-yellow: #eab308;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-cyan);
+}
+
+body {
+    @apply bg-terminal-bg text-terminal-body font-sans transition-colors duration-300 selection:bg-terminal-cyan selection:text-white;
+}
+
+/* Explicit utility to bypass Tailwind dark mode variant issues */
+.tech-icon {
+    filter: none;
+    transition: all 0.3s;
+}
+
+:is(.dark .tech-icon) {
+    filter: brightness(0) invert(1);
+}
+
+/* Syntax Highlighting Theme - Terminal Style */
+.hljs {
+    background: var(--panel);
+    color: var(--body);
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+    color: var(--accent-purple);
+}
+
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+    color: var(--accent-green);
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+    color: var(--accent-cyan);
+}
+
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+    color: var(--accent-yellow);
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-link {
+    color: #f97316;
+}
+
+.hljs-built_in,
+.hljs-deletion {
+    color: #ef4444;
+}
+
+.hljs-formula {
+    background: var(--bg);
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
