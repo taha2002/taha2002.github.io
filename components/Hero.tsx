@@ -136,10 +136,6 @@ const Hero: React.FC = () => {
     return false;
   };
 
-  const handleDownloadCV = () => {
-    window.print();
-  };
-
   const handleCommand = (cmd: string) => {
     const rawCmd = cmd.trim();
     const args = rawCmd.split(' ').filter(c => c !== '');
@@ -285,7 +281,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="text-terminal-body text-base md:text-lg leading-relaxed max-w-xl transition-colors">
-            Specialized in complex <strong>Backend Systems</strong>, <strong>Data Extraction Pipelines</strong>, and <strong>Industrial Maintenance</strong>.
+            Specialized in complex <strong>Backend Systems</strong>, and <strong>Data Extraction Pipelines</strong>.
             Bridging the gap between raw data and actionable web interfaces.
           </p>
 
@@ -297,14 +293,15 @@ const Hero: React.FC = () => {
               <TerminalIcon size={18} />
               View Protocol
             </button>
-            <button
-              onClick={handleDownloadCV}
+            <a
               className="px-6 py-4 border border-terminal-border text-terminal-body rounded hover:border-terminal-cyan hover:text-terminal-cyan transition-all flex items-center justify-center gap-2 text-sm md:text-base bg-terminal-panel"
               title="Save as PDF"
+              href='/taha_bouras_resume.pdf'
+              target="_blank"
             >
               <Download size={18} />
               Download CV
-            </button>
+            </a>
           </div>
         </div>
 

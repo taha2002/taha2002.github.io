@@ -1,0 +1,124 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{fontawesome5}
+
+% Font options
+\usepackage[sfdefault]{roboto}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+\vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge Taha Bouras} \\
+
+  \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:tahadevbou@gmail.com}{tahadevbou@gmail.com} $|$
+  \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/taha-bouras}{taha-bouras} $|$
+  \hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/taha2002}{taha2002} $|$
+  \hspace{1pt} \faGlobe \hspace{2pt} \href{https://taha.is-a.dev}{taha.is-a.dev} \\
+  \hspace{1pt} \faPhone \hspace{2pt} +213 542085561 $|$
+  \small \hspace{1pt} \faMapMarker* \hspace{2pt} Ghardaia, Algeria
+\end{center}
+
+\section*{Professional Summary}
+Senior Full Stack Engineer with over 4 years of experience designing and maintaining distributed web applications and data-intensive systems. Specialized in building robust backend architectures using Python and PHP, complemented by modern frontend development with TypeScript and Next.js. Proven track record in developing internal tooling, custom integration middleware, and automated data pipelines. Experienced in reverse-engineering undocumented APIs and designing automation systems resilient to bot-detection and traffic-filtering mechanisms.
+
+\section{Core Technical Skills}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Languages}: Python, PHP, TypeScript, JavaScript, SQL}
+  \resumeItem{\textbf{Frameworks \& Platforms}: Next.js, React, Node.js, FastAPI, WordPress/WooCommerce, Shopify, Supabase}
+  \resumeItem{\textbf{Systems \& Integrations}: PostgreSQL, LangChain, Burp Suite, API Reverse Engineering, Bot Detection Mitigation, Traffic Analysis, Session \& Token Management, OpenTelemetry}
+  \resumeItem{\textbf{Infrastructure \& Data Tooling}: Docker, Git, Linux, N8N, FFmpeg, MinIO, ETL Pipelines, BeautifulSoup, Selenium, Scheduled Crawlers}
+\resumeSubHeadingListEnd
+
+\section{Professional Experience}
+\resumeSubHeadingList
+
+  \resumeSubheading
+      {Morrbiz}{June 2023 -- Dec 2025}
+      {Senior Full Stack Engineer}{Remote (Malaysia)}
+      \resumeSubHeadingList
+          \resumeItem{Created a centralized B2B operational dashboard using Next.js and Supabase, unified 3+ e-commerce, logistics, and communication modules.}
+          \resumeItem{Engineered a cross-platform inventory management agent using LangChain and Expo for real-time POS and digital storefront synchronization.}
+          \resumeItem{Developed custom Shopify and WooCommerce extensions to manage complex donor and beneficiary data structures.}
+          \resumeItem{Integrated OpenTelemetry and distributed tracing, improving observability and reducing debugging time.}
+      \resumeSubHeadingListEnd
+
+  \resumeSubheading
+      {Apollo Digital Solutions}{January 2021 -- Present}
+      {Backend Engineer}{Remote (Algeria)}
+      \resumeSubHeadingList
+          \resumeItem{Built systematized data ingestion pipelines processing 50K+ records, including reverse-engineered integrations with undocumented APIs protected by bot-detection systems.}
+          \resumeItem{Deployed a secure video delivery platform using FastAPI and HLS with dynamic watermarking and encryption.}
+          \resumeItem{Engineered bi-directional synchronization between legacy sales software and modern web platforms.}
+          \resumeItem{Created and maintained RESTful APIs for Product Information Management systems.}
+          \resumeItem{Improved high-volume data extraction scripts for improved memory usages and performance.}
+      \resumeSubHeadingListEnd
+
+  \resumeSubheading
+      {Independent Contractor}{From 2021}
+      {Software Engineering Consultant}{Remote}
+      \resumeSubHeadingList
+          \resumeItem{Conducted protocol and traffic analysis to reverse-engineer private or undocumented.}
+          \resumeItem{Created high-frequency monitoring systems for multi-regional e-commerce platforms, tracking 450K+ daily products.}
+          \resumeItem{Developed secure API bridges between Zoho, Airtable, Microsoft Power Automate, and CMS platforms.}
+          \resumeItem{Implemented automated digital fulfillment systems with payment verification logic.}
+      \resumeSubHeadingListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingList
+  \resumeSubheading
+      {University of Ghardaia}{Ghardaia, Algeria}
+      {Master of Industrial Maintenance Engineering}{Expected 2025}
+  \resumeSubheading
+      {University of Ghardaia}{Ghardaia, Algeria}
+      {Bachelor of Industrial Maintenance Engineering}{2020 -- 2023}
+\resumeSubHeadingListEnd
+
+\end{document}
