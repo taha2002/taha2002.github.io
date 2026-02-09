@@ -267,7 +267,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative px-4 py-20 md:py-0 z-[50]">
+    <section className={`min-h-screen flex flex-col justify-center items-center relative px-4 py-20 md:py-0` }>
       <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-12 items-center">
 
         {/* Left: Bio */}
@@ -309,7 +309,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Right: Terminal Visual */}
-        <div ref={containerRef} className="w-full order-1 lg:order-2 h-[320px] relative z-10">
+        <div ref={containerRef} className={`w-full order-1 lg:order-2 h-[320px] relative ${isMaximized ? " z-[50]" : "z-10"}`}>
           <div
             style={terminalStyle}
             className={`
